@@ -73,13 +73,6 @@ body {
   max-height: 75vh;
 }
 
-.media iframe {
-  display: block;
-  width: 100%;
-  max-width: 100%;
-  border: 0;
-}
-
 .media .external-link {
   font-family: var(--sans);
   font-size: 0.8rem;

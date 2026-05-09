@@ -26,7 +26,7 @@ The scheduled agent reads `EDITORIAL.md` + `history.json`, picks a mood (cooldow
 ## Invariants — don't break these
 
 - **Idempotency.** If `archive/YYYY-MM-DD.html` already exists for yesterday, the day's run already happened — exit without changes.
-- **No JavaScript in pages we write.** Self-contained HTML + CSS. Third-party iframe embeds (Bandcamp, YouTube, Spotify, Internet Archive, etc.) are allowed for music/video — they're HTML elements; the JS lives inside the iframe, not in our page.
+- **No JavaScript.** Pages must be self-contained HTML + CSS.
 - **Mood is internal.** Stored in `history.json` to steer selection and prose, but never rendered on the page.
 - **Pre-push link verification is mandatory and automated.** Every external URL in `index.html` is fetched before push; broken links cause the work to be silently swapped, not surfaced for review. See Step 12 of `GENERATOR_PROMPT.md`.
 - **`styles.css` is shared.** Don't modify it for routine entries — only when `EDITORIAL.md` explicitly asks for a design change.

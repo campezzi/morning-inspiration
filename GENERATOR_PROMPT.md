@@ -59,11 +59,7 @@ Choose a specific, real work in the selected format that fits the mood. Prioriti
 ## Step 7 — Handle media
 
 - **Images (photographs, paintings, architecture):** Outbound image downloads are blocked in this environment — do not attempt to download files locally. Find a freely-licensed image and reference its external URL directly in `<img src>`. Browsers load these client-side, so external URLs work fine. Good sources: Wikimedia Commons (`https://upload.wikimedia.org/wikipedia/commons/...`), Met Open Access (`https://images.metmuseum.org/...`), Art Institute of Chicago IIIF (`https://www.artic.edu/iiif/2/{uuid}/full/843,/0/default.jpg`), Internet Archive, Rijksmuseum Open Access. If no freely-licensed image is available, fall back to the external-link markup linking to the source page.
-- **Music/video:** Try to embed cleanly first; fall back to a link only if no good embed is available. Iframes from major platforms are fine — they're HTML; the no-JS rule is about our own page, not what's inside an iframe.
-    - **Music:** prefer Bandcamp's iframe embed (works for any artist on Bandcamp). Spotify embed (`https://open.spotify.com/embed/track/{id}` or `/album/{id}`) and SoundCloud embed are also clean. For public-domain or rare material, Internet Archive's embed (`https://archive.org/embed/{identifier}`) works.
-    - **Video:** prefer YouTube's privacy-enhanced embed (`https://www.youtube-nocookie.com/embed/{video_id}`) or Vimeo's embed. Internet Archive video embeds also work.
-    - **Fall back to the external-link markup** if: no clean embed exists for this work, embedding is disabled by the rights-holder, or the embed URL fails the Step 12 verification.
-    - Never download audio or video files.
+- **Music/video:** Never embed or download. Link to a canonical source (artist site, label page, Bandcamp, Internet Archive). Use the external-link markup in the media block.
 - **Passages:** Include full text only for public-domain works. For copyrighted works, excerpt 1–2 sentences and link to the full text. Use the passage/blockquote markup.
 
 ## Step 8 — Write the note
@@ -101,12 +97,7 @@ The template already includes the archive link next to `{{YESTERDAY_LINK}}` — 
   <img src="https://external-source.org/path/to/image.jpg" alt="Description of the work">
 </div>
 
-<!-- Music / video — iframe embed (preferred) -->
-<div class="media">
-  <iframe src="https://embed-url" width="100%" height="120" frameborder="0" loading="lazy" allow="encrypted-media; autoplay; fullscreen" title="Title — Creator"></iframe>
-</div>
-
-<!-- Music / video — external-link fallback (only when no clean embed is available) -->
+<!-- Music / video / external link -->
 <div class="media">
   <a class="external-link" href="https://canonical-source.com/" target="_blank" rel="noopener">Listen: Title — Creator</a>
 </div>
@@ -181,16 +172,14 @@ Before pushing, verify every external URL referenced by the new `index.html` act
 
 Extract from the generated `index.html`:
 - Every `src` attribute on `<img>` tags
-- Every `src` attribute on `<iframe>` tags
 - Every `href` on `<a>` tags pointing to an external domain (anything starting with `http://` or `https://`)
 
 For each URL, fetch it (WebFetch, or `curl -sIL -o /dev/null -w "%{http_code}"`). Treat any final status code in the 200–399 range as good. Anything else (404, 403, 5xx, DNS failure, timeout) is a failure.
 
 If any URL fails:
 1. Do not push.
-2. Try once to find a working replacement URL for the same work (e.g. a different Wikimedia file, a different mirror of the source page).
-3. If the failure is an `<iframe>` embed (e.g. embedding disabled or the platform unreachable), swap to the external-link fallback markup pointing to a canonical source for the work, and re-verify.
-4. If you still can't get clean links for this work, silently pick a different work and restart from Step 6 (keep the same mood and format unless the failure suggests the format itself is the problem). Do not feature a work whose links don't resolve.
+2. Try once to find a working replacement URL for the same work (e.g. a different Wikimedia file, a different mirror of the source page). Re-verify.
+3. If you still can't get clean links for this work, silently pick a different work and restart from Step 6 (keep the same mood and format unless the failure suggests the format itself is the problem). Do not feature a work whose links don't resolve.
 
 Only proceed to Step 13 once every URL in `index.html` returns a healthy status. Do not surface intermediate failures to the user — this is housekeeping.
 
