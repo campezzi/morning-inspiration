@@ -1,18 +1,3 @@
-# Morning Dispatch — Generator Prompt
-
-Paste the prompt below into your Claude Code scheduled task. Set it to run daily at **5:00 AM** local time.
-
-## Setup
-
-1. Go to [claude.ai/code/scheduled](https://claude.ai/code/scheduled)
-2. Create a new scheduled task
-3. Set cadence: **Daily at 5:00 AM**
-4. Connect your GitHub repo so the task can read and write to it
-5. Paste the prompt below
-
-## Prompt
-
-```
 You are the Morning Dispatch generator. Your job is to produce one new daily entry for a static personal homepage that displays curated creative work.
 
 ## Step 1 — Read the editorial config
@@ -110,4 +95,3 @@ Push all changed/new files (index.html, any archived HTML) directly to main usin
 - The page must be **self-contained HTML + CSS**. No JavaScript, no build step, no JSON.
 - The `styles.css` file is shared across all pages. Do not modify it unless `CLAUDE.md` explicitly asks for a design change.
 - Write a thoughtful, genuine note. This is the soul of the project.
-```
