@@ -6,17 +6,33 @@ Read `CLAUDE.md` in the repo root. This is the source of truth for what to featu
 
 ## Step 2 — Archive yesterday's page
 
-If `index.html` exists, determine yesterday's date and rename it to `YYYY-MM-DD.html` (e.g. `2026-05-09.html`).
+If `index.html` exists, determine yesterday's date and move it to `archive/YYYY-MM-DD.html` (e.g. `archive/2026-05-09.html`). Create the `archive/` directory if it doesn't already exist.
 
-If a file with yesterday's date already exists, the task already ran today — exit immediately without making any changes.
+When moving the file, change its `<link rel="stylesheet" href="styles.css">` to `<link rel="stylesheet" href="../styles.css">` so the relocated file still finds the stylesheet.
 
-## Step 3 — Pick the next format
+If `archive/YYYY-MM-DD.html` already exists for yesterday, the task already ran today — exit immediately without making any changes.
 
-List the last ~10 dated HTML files. For each one, read the format label (the text inside `<div class="format-label">`) and the creator (inside `<div class="work-creator">`). Use this to:
-- Avoid repeating the same format as yesterday
-- Avoid repeating a creator used in the last ~30 days
-- Follow the rotation guidance in `CLAUDE.md`
-- Honor "things I'm tired of" exclusions
+## Step 3 — Read the ledger
+
+Read `history.json` in the repo root. It is a JSON array of past entries, oldest first. Each entry has the shape:
+
+```json
+{
+  "date": "YYYY-MM-DD",
+  "format": "Painting",
+  "title": "Work title",
+  "creator": "Creator name",
+  "year": 1906,
+  "source_name": "Tate, London",
+  "source_url": "https://..."
+}
+```
+
+If the file doesn't exist, treat it as an empty array. Use this ledger as the source of truth for rotation decisions:
+
+- Avoid repeating the same format as yesterday (and follow any cooldown rules in `CLAUDE.md` — e.g. no format repeats within 3 days)
+- Avoid repeating a creator featured in roughly the last 30 days
+- Honor "things I'm tired of" exclusions from `CLAUDE.md`
 - Prioritize anything listed in "specific pieces I'd love to see"
 
 ## Step 4 — Select a work
@@ -29,9 +45,11 @@ Choose a specific, real work in the selected format. Prioritize:
 
 ## Step 5 — Handle media
 
-- **Images (photographs, paintings, architecture):** Outbound image downloads are blocked in this environment — do not attempt to download files to `/media/`. Instead, find a freely-licensed image and reference its external URL directly in `<img src>`. Browsers load these client-side, so external URLs work fine. Good sources: Wikimedia Commons (`https://upload.wikimedia.org/wikipedia/commons/...`), Met Open Access (`https://images.metmuseum.org/...`), Art Institute of Chicago IIIF (`https://www.artic.edu/iiif/2/{uuid}/full/843,/0/default.jpg`), Internet Archive, Rijksmuseum Open Access. If no freely-licensed image is available, fall back to the external-link markup linking to the source page.
+- **Images (photographs, paintings, architecture):** Outbound image downloads are blocked in this environment — do not attempt to download files locally. Find a freely-licensed image and reference its external URL directly in `<img src>`. Browsers load these client-side, so external URLs work fine. Good sources: Wikimedia Commons (`https://upload.wikimedia.org/wikipedia/commons/...`), Met Open Access (`https://images.metmuseum.org/...`), Art Institute of Chicago IIIF (`https://www.artic.edu/iiif/2/{uuid}/full/843,/0/default.jpg`), Internet Archive, Rijksmuseum Open Access. If no freely-licensed image is available, fall back to the external-link markup linking to the source page.
 - **Music/video:** Never embed or download. Link to a canonical source (artist site, label page, Bandcamp, Internet Archive). Use the external-link markup in the media block.
 - **Passages:** Include full text only for public-domain works. For copyrighted works, excerpt 1–2 sentences and link to the full text. Use the passage/blockquote markup.
+
+**Verify URLs before committing.** This is non-negotiable — link rot and bad URLs are the most common failure mode. Before writing any URL into the entry, fetch it with WebFetch (or HEAD via curl) and confirm it returns a real page for the work in question. This applies to both image URLs and the source-page URL. If a URL doesn't resolve, find another one or pick a different work. Do not commit broken links.
 
 ## Step 6 — Write the note
 
@@ -54,7 +72,9 @@ Use `template.html` as the structural reference. Fill in:
 - `{{NOTE}}` — the note, wrapped in `<p>` tags
 - `{{SOURCE}}` — attribution line with link
 - `{{DATE}}` — today's date, formatted like "9 May 2026"
-- `{{YESTERDAY_LINK}}` — an `<a class="yesterday-link" href="YYYY-MM-DD.html">yesterday</a>` link pointing to the file just archived
+- `{{YESTERDAY_LINK}}` — `<a class="yesterday-link" href="archive/YYYY-MM-DD.html">yesterday</a>` pointing to the file just archived
+
+The template already includes the archive link next to `{{YESTERDAY_LINK}}` — leave it alone.
 
 **Media block patterns:**
 
@@ -76,22 +96,93 @@ Use `template.html` as the structural reference. Fill in:
 </div>
 ```
 
-Write the complete HTML file as `index.html`. Do not use JavaScript. Link to `styles.css`.
+Write the complete HTML file as `index.html`. Do not use JavaScript. Link to `styles.css` (relative path, since `index.html` lives at the repo root).
 
-## Step 8 — Commit and push
+## Step 8 — Append to the ledger
 
-Push all changed/new files (index.html, any archived HTML) directly to main using the GitHub API — do not create a pull request. Direct `git push origin main` is blocked by branch protection in this environment; use `mcp__github__push_files` instead:
+Append today's entry to `history.json`. Keep the array in chronological order (oldest first). Match the field names exactly as shown in Step 3.
+
+## Step 9 — Regenerate archive.html
+
+Rewrite `archive.html` from scratch using the updated `history.json`. The page is a static index of every past entry.
+
+Structure:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Morning Dispatch — Archive</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="dispatch archive">
+
+    <div class="format-label">Archive</div>
+
+    <!-- One <section class="archive-month"> per month, newest month first.
+         Within a month, entries newest-first. -->
+    <section class="archive-month">
+      <h2 class="archive-month-name">May 2026</h2>
+      <ul class="archive-list">
+        <li class="archive-item">
+          <a href="...">
+            <span class="archive-date">9 May</span>
+            <span class="archive-format">Film</span>
+            <span class="archive-title">Fallen Angels</span>
+            <span class="archive-creator">Wong Kar-wai</span>
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <footer class="dispatch-footer">
+      <a class="yesterday-link" href="index.html">today</a>
+    </footer>
+
+  </main>
+</body>
+</html>
+```
+
+Link targets:
+- The most recent entry (today's, just generated) links to `index.html`
+- All other entries link to `archive/YYYY-MM-DD.html`
+
+## Step 10 — Verify links (automated, no user review)
+
+Before pushing, verify every external URL referenced by the new `index.html` actually resolves. This step is fully automated — do not ask the user to review or confirm anything; just do it and move on if it passes.
+
+Extract from the generated `index.html`:
+- Every `src` attribute on `<img>` tags
+- Every `href` on `<a>` tags pointing to an external domain (anything starting with `http://` or `https://`)
+
+For each URL, fetch it (WebFetch, or `curl -sIL -o /dev/null -w "%{http_code}"`). Treat any final status code in the 200–399 range as good. Anything else (404, 403, 5xx, DNS failure, timeout) is a failure.
+
+If any URL fails:
+1. Do not push.
+2. Try once to find a working replacement URL for the same work (e.g. a different Wikimedia file, a different mirror of the source page). Re-verify.
+3. If you still can't get clean links for this work, silently pick a different work and restart from Step 4. Do not feature a work whose links don't resolve.
+
+Only proceed to Step 11 once every URL in `index.html` returns a healthy status. Do not surface intermediate failures to the user — this is housekeeping.
+
+## Step 11 — Commit and push
+
+Push all changed/new files directly to main using the GitHub API — do not create a pull request. Direct `git push origin main` is blocked by branch protection in this environment; use `mcp__github__push_files` instead:
 
 - `owner`: campezzi
 - `repo`: morning-inspiration
 - `branch`: main
 - `message`: `add entry: [title] — [creator]`
-- `files`: array of `{ path, content }` for every file that changed
+- `files`: array of `{ path, content }` for every file that changed. Typical run touches: `index.html`, `archive/YYYY-MM-DD.html` (the archived prior entry), `archive.html`, `history.json`. Note that moving a file via the GitHub API requires writing the new path and deleting the old one — include both operations.
 
 ## Important notes
 
-- This task must be **idempotent**. If today's archive file already exists, exit without changes.
+- This task must be **idempotent**. If `archive/YYYY-MM-DD.html` for yesterday already exists, exit without changes.
 - Every work you feature must be **real** — a verifiable piece by a verifiable creator.
-- The page must be **self-contained HTML + CSS**. No JavaScript, no build step, no JSON.
+- The pre-push verification in Step 10 is mandatory and fully automated. Never push an entry with a broken link — silently swap the work and try again instead.
+- The page must be **self-contained HTML + CSS**. No JavaScript, no build step.
 - The `styles.css` file is shared across all pages. Do not modify it unless `CLAUDE.md` explicitly asks for a design change.
 - Write a thoughtful, genuine note. This is the soul of the project.

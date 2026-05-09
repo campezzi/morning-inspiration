@@ -182,7 +182,13 @@ body {
   margin-bottom: 1rem;
 }
 
-.yesterday-link {
+.footer-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.yesterday-link,
+.archive-link {
   display: inline-block;
   font-family: var(--sans);
   font-size: 0.7rem;
@@ -194,9 +200,97 @@ body {
   transition: color 0.2s, border-color 0.2s;
 }
 
-.yesterday-link:hover {
+.yesterday-link:hover,
+.archive-link:hover {
   color: var(--text);
   border-color: var(--text-muted);
+}
+
+/* Archive page */
+.archive-month + .archive-month {
+  margin-top: 2.5rem;
+}
+
+.archive-month-name {
+  font-family: var(--sans);
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+  margin-bottom: 1.25rem;
+}
+
+.archive-list {
+  list-style: none;
+}
+
+.archive-item + .archive-item {
+  margin-top: 0.5rem;
+}
+
+.archive-item a {
+  display: grid;
+  grid-template-columns: 3.5rem 5.5rem 1fr;
+  gap: 1rem;
+  align-items: baseline;
+  padding: 0.5rem 0;
+  text-decoration: none;
+  color: var(--text);
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.archive-item a:hover {
+  border-bottom-color: var(--rule);
+}
+
+.archive-date {
+  font-family: var(--sans);
+  font-size: 0.7rem;
+  font-weight: 400;
+  color: var(--text-faint);
+  letter-spacing: 0.02em;
+}
+
+.archive-format {
+  font-family: var(--sans);
+  font-size: 0.6rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.archive-title {
+  font-family: var(--serif);
+  font-size: 0.95rem;
+  font-style: italic;
+  font-weight: 400;
+  color: var(--text);
+}
+
+.archive-creator {
+  font-family: var(--sans);
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: var(--text-muted);
+  margin-left: 0.5rem;
+}
+
+@media (max-width: 600px) {
+  .archive-item a {
+    grid-template-columns: 3rem 1fr;
+    row-gap: 0.15rem;
+  }
+  .archive-format {
+    grid-column: 2;
+  }
+  .archive-title,
+  .archive-creator {
+    grid-column: 2;
+    margin-left: 0;
+  }
 }
 
 /* Responsive */

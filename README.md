@@ -9,13 +9,14 @@ The whole thing is plain HTML and CSS. No JavaScript, no build step, no framewor
 A scheduled Claude Code task runs daily at 5am. Each run:
 
 1. Reads `CLAUDE.md` for editorial direction
-2. Renames the current `index.html` to `YYYY-MM-DD.html` (yesterday's date)
-3. Picks a format and a work, following the rotation rules
-4. Downloads freely-licensed images to `/media/` (or links out for music/video)
-5. Generates a new `index.html` from `template.html`
-6. Commits and pushes
+2. Moves the current `index.html` to `archive/YYYY-MM-DD.html` (yesterday's date)
+3. Reads `history.json` to know what's been featured recently
+4. Picks a format and a work, following the rotation rules
+5. Verifies image and source URLs resolve, then writes a new `index.html` from `template.html`
+6. Appends the new entry to `history.json` and regenerates `archive.html`
+7. Commits and pushes
 
-The archive grows one file per day. Each page links backward to the one before it.
+The archive grows one file per day. Each page links backward to yesterday and to the full archive.
 
 ## Steering the project
 
@@ -60,10 +61,11 @@ If you want to trigger a run outside the schedule, use Claude Code in this repo 
 
 ```
 index.html          — today's entry
-2026-05-08.html     — yesterday (and so on, one file per day)
+archive.html        — full chronological index of past entries
+archive/            — past entries, one file per day (YYYY-MM-DD.html)
+history.json        — ledger of every entry (drives rotation + archive page)
 styles.css          — shared stylesheet
 template.html       — skeleton the generator fills in
-media/              — downloaded images
 CLAUDE.md           — edit this to steer the project
 GENERATOR_PROMPT.md — the prompt for the scheduled task
 README.md           — this file
