@@ -1,62 +1,45 @@
-# Morning Dispatch — editorial config
+# Morning Dispatch — engineering notes
 
-This file steers the daily generator. Edit it any time. Changes take effect on the next run (5am).
+This file is for Claude (or any agent) helping Thiago evolve the project's code and structure. Editorial direction — what to feature, voice rules, mood, format rotation, exclusions — lives in `EDITORIAL.md`. Leave that file to the editor; only touch it when explicitly asked to.
 
-## Current interests
-Things I'm drawn to right now. Add, remove, reorder freely. Named artists are starting points, not boundaries — use them to understand the taste, then surprise me with adjacent things I haven't heard of yet. Discovery is the whole point.
+## What this is
 
-Mix in contemporary and living artists alongside the classics. I want to stay connected to what's happening now — emerging photographers, new albums, recent films, young painters — not just look backward. Don't overdo it, but keep me evolving. A surprise from someone working right now is worth more than another safe canonical pick.
+A static personal homepage that displays one curated piece of work per day — a photograph, a film still, a passage, a song. A scheduled Claude Code task runs at 5am and produces a new entry. The site is plain HTML + CSS, served as-is from GitHub Pages. **No JavaScript, no build step, no framework.**
 
-- Photography: Saul Leiter, Daido Moriyama, Todd Hido, Luigi Ghirri, Rinko Kawauchi, Stephen Shore, Vivian Maier, Alec Soth, William Eggleston, Gregory Crewdson, Sebastião Salgado
-- Architecture: Tadao Ando, Carlo Scarpa, Peter Zumthor, Sigurd Lewerentz, Brutalism, Japanese minimalism, racetrack architecture
-- Film: Lynch, Scorsese, Tarkovsky, Antonioni, Wong Kar-wai, Cassavetes, the Coens, Lanthimos
-- Music: DJ Shadow, The White Stripes, Angine de Poitrine, Portishead, Massive Attack, Tom Waits, Nick Cave, Boards of Canada, Jeff Buckley, Kraftwerk, jazz, blues
-- Writing: Edgar Allan Poe, Borges, Calvino, Carver, Sebald, Didion, McCarthy, Murakami, Bukowski, Kafka, artist interviews
-- Motorsport: Senna, F1 history, endurance racing, famous laps and decisive moments
-- Painting: Hopper, Hammershøi, Goya, Bacon, Rothko, Agnes Martin, Van Gogh, Warhol, Banksy, Basquiat, Japanese woodblock, religious iconography
-- Surreal: Magritte, de Chirico, Buñuel, Švankmajer, outsider art, liminal spaces
-- Sculpture/installation: Richard Serra, James Turrell, Anish Kapoor, Walter De Maria, land art
-- Design: Dieter Rams, Bruno Munari, Japanese industrial design, vintage race posters
-- Retro sci-fi: pulp cover art, Moebius, Syd Mead, Chris Foss, Soviet space posters, vintage futurism
-- Video games: pixel art, early arcade cabinet art, box art from the 8-bit and 16-bit eras, demoscene
-- Comics: Moebius, Katsuhiro Otomo, Enki Bilal, Jack Kirby, European bande dessinée, underground comix
-- Comedy: Mel Brooks, Larry David, Jerry Seinfeld, Louis CK, stand-up specials, comedic writing
-- Street photography: urban life, Fitzroy/Melbourne vibes, candid moments, city textures
-- Portraits: classic and contemporary actresses, alternative looks, artistic fashion photography. Tasteful only — nothing risqué. Think Avedon, Leibovitz, Paolo Roversi, Peter Lindbergh, Helmut Newton (the restrained side), Deborah Turbeville. Subjects like Monica Bellucci, Charlotte Gainsbourg, Tilda Swinton, Saoirse Ronan, Léa Seydoux, Greta Garbo, Anna Karina, emerging faces from independent film
+## Repo layout
 
-## Things I'm tired of
-Don't surface these for a while.
+- `index.html` — today's entry
+- `archive/YYYY-MM-DD.html` — past entries, one file per day
+- `archive.html` — chronological index of every past entry, regenerated each run
+- `history.json` — ledger of every entry (date, mood, format, creator, title, year, source). Drives the cooldowns and the archive page.
+- `template.html` — skeleton the generator fills in to produce `index.html`
+- `styles.css` — shared stylesheet, used by every page
+- `EDITORIAL.md` — editorial direction. The user edits this freely; the daily generator reads it on every run.
+- `GENERATOR_PROMPT.md` — the prompt the scheduled agent executes at 5am. Read this if you're changing the daily flow.
+- `README.md` — human-facing intro
+- `CLAUDE.md` — this file
 
-- (empty for now)
+## Daily flow (high level)
 
-## Specific pieces I'd love to see
-If anything here fits the next slot, prioritize it.
+The scheduled agent reads `EDITORIAL.md` + `history.json`, picks a mood (cooldown-aware), then a format (mood-biased), then a specific work. It moves yesterday's `index.html` into `archive/`, generates a new `index.html` from `template.html`, appends the new entry to `history.json`, regenerates `archive.html`, verifies every external URL resolves, and pushes via the GitHub API. Full step-by-step is in `GENERATOR_PROMPT.md`.
 
-- (empty for now)
+## Invariants — don't break these
 
-## Editorial voice
-- 3–5 sentences for the note
-- Spare and observational
-- Lead with what's in the work
-- One concrete detail beats one abstract claim
-- No "this reminds us that…", no "we can learn…", no "in a world where…"
-- Match the register to the work and the mood — a Mel Brooks routine doesn't deserve the same tone as a Hammershøi interior. Don't force a tidy ending.
+- **Idempotency.** If `archive/YYYY-MM-DD.html` already exists for yesterday, the day's run already happened — exit without changes.
+- **No JavaScript.** Pages must be self-contained HTML + CSS.
+- **Mood is internal.** Stored in `history.json` to steer selection and prose, but never rendered on the page.
+- **Pre-push link verification is mandatory and automated.** Every external URL in `index.html` is fetched before push; broken links cause the work to be silently swapped, not surfaced for review. See Step 12 of `GENERATOR_PROMPT.md`.
+- **`styles.css` is shared.** Don't modify it for routine entries — only when `EDITORIAL.md` explicitly asks for a design change.
+- **Archived files use `../styles.css`.** When moving `index.html` → `archive/YYYY-MM-DD.html`, the stylesheet href must be rewritten.
+- **Cooldowns live in `EDITORIAL.md`.** Format: 3-day window. Mood: 4-day window. Creator: ~30 days. The generator reads these from `EDITORIAL.md` — don't hardcode them in the prompt or anywhere else.
 
-## Format rotation
-Pick randomly from: photograph, architecture, film, music, passage, motorsport, painting, surreal, sculpture/installation, design, retro sci-fi, video game, comic, comedy, street photography, portrait. No format repeats within a 3-day window (if painting runs Monday, it can't reappear until Thursday). Don't repeat the same creator within ~30 days.
+## Where to make different kinds of changes
 
-## Mood rotation
-Each entry is written in one of these moods, picked at random with the constraint that no mood repeats within a 4-day window. Mood is chosen *first*, then format follows with a loose bias (e.g. a "playful" day leans toward comedy/games/design but isn't restricted to them — surprise pairings are welcome). Mood is internal — never displayed on the page.
+- *"I want different kinds of content"* → `EDITORIAL.md`
+- *"I want the generator to behave differently"* → `GENERATOR_PROMPT.md`
+- *"I want a different layout or design"* → `template.html` and/or `styles.css` (and add a note in `EDITORIAL.md` if it changes the visual identity)
+- *"I want a new project-level feature"* → usually touches `GENERATOR_PROMPT.md` plus at least one of the above; discuss before implementing
 
-- **contemplative** — quiet, still, attentive (Hammershøi, Zumthor, Agnes Martin, Sebald)
-- **playful** — warm, light, has fun (Mel Brooks, Calvino, Munari, demoscene)
-- **wry** — dry, observational, sly half-smile (Larry David, Borges, Hopper as deadpan)
-- **bold** — heavy, confrontational, full-volume (Goya, Bacon, Serra, McCarthy, Senna)
-- **restless** — kinetic, propulsive, alive (jazz, Cassavetes, street photography, Moriyama)
-- **melancholic** — sad, lonely, lingering (Hopper, Buckley, Wong Kar-wai, Portishead)
-- **uncanny** — strange, dreamlike, off-balance (Lynch, Magritte, Švankmajer, liminal spaces)
+## Push behavior
 
-## Notes to the generator
-Anything I want to flag, experiment with, or change. Free-form.
-
-- (empty for now)
+In the scheduled run, direct `git push origin main` is blocked by branch protection — the agent uses `mcp__github__push_files` instead. When Thiago is working locally, normal `git push origin main` works (with his approval, since main is the default branch).

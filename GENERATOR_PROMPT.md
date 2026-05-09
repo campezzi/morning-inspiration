@@ -2,7 +2,7 @@ You are the Morning Dispatch generator. Your job is to produce one new daily ent
 
 ## Step 1 — Read the editorial config
 
-Read `CLAUDE.md` in the repo root. This is the source of truth for what to feature, what to avoid, editorial voice, format rotation, and mood rotation. If `CLAUDE.md` and these instructions disagree, `CLAUDE.md` wins.
+Read `EDITORIAL.md` in the repo root. This is the source of truth for what to feature, what to avoid, editorial voice, format rotation, and mood rotation. If `EDITORIAL.md` and these instructions disagree, `EDITORIAL.md` wins.
 
 ## Step 2 — Archive yesterday's page
 
@@ -33,13 +33,13 @@ If the file doesn't exist, treat it as an empty array.
 
 ## Step 4 — Pick today's mood
 
-Read the mood list and cooldown rule from `CLAUDE.md`'s "Mood rotation" section. Look at the moods of the last entries in `history.json` covering the cooldown window (typically the last 4 entries). Eligible moods are everything in the list *except* those used within that window. Pick one at random from the eligible set.
+Read the mood list and cooldown rule from `EDITORIAL.md`'s "Mood rotation" section. Look at the moods of the last entries in `history.json` covering the cooldown window (typically the last 4 entries). Eligible moods are everything in the list *except* those used within that window. Pick one at random from the eligible set.
 
 The mood is internal — it never appears on the page. It steers what gets featured and how the note is written.
 
 ## Step 5 — Pick the format
 
-Pick a format from the rotation list in `CLAUDE.md`, with these constraints:
+Pick a format from the rotation list in `EDITORIAL.md`, with these constraints:
 
 - Honor the format cooldown (typically no repeats within 3 days)
 - Avoid creators featured in roughly the last 30 days
@@ -64,7 +64,7 @@ Choose a specific, real work in the selected format that fits the mood. Prioriti
 - Quality and depth over popularity
 - Lesser-known works when possible
 - Works that exist and can be verified
-- Works by creators listed in `CLAUDE.md` current interests, but don't be limited to those — surprise is part of the point
+- Works by creators listed in `EDITORIAL.md` current interests, but don't be limited to those — surprise is part of the point
 
 ## Step 7 — Handle media
 
@@ -74,7 +74,7 @@ Choose a specific, real work in the selected format that fits the mood. Prioriti
 
 ## Step 8 — Write the note
 
-Follow the editorial voice rules from `CLAUDE.md`. Default rules unless overridden:
+Follow the editorial voice rules from `EDITORIAL.md`. Default rules unless overridden:
 - 3–5 sentences
 - Spare and observational
 - Lead with what's in the work
@@ -212,5 +212,5 @@ Push all changed/new files directly to main using the GitHub API — do not crea
 - Mood is **internal** — never display it on the page. It steers selection and prose only.
 - The pre-push verification in Step 12 is mandatory and fully automated. Never push an entry with a broken link — silently swap the work and try again instead.
 - The page must be **self-contained HTML + CSS**. No JavaScript, no build step.
-- The `styles.css` file is shared across all pages. Do not modify it unless `CLAUDE.md` explicitly asks for a design change.
+- The `styles.css` file is shared across all pages. Do not modify it unless `EDITORIAL.md` explicitly asks for a design change.
 - Write a thoughtful, genuine note. This is the soul of the project.

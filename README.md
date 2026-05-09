@@ -8,7 +8,7 @@ The whole thing is plain HTML and CSS. No JavaScript, no build step, no framewor
 
 A scheduled Claude Code task runs daily at 5am. Each run:
 
-1. Reads `CLAUDE.md` for editorial direction
+1. Reads `EDITORIAL.md` for editorial direction
 2. Moves the current `index.html` to `archive/YYYY-MM-DD.html` (yesterday's date)
 3. Reads `history.json` to know what's been featured recently
 4. Picks a format and a work, following the rotation rules
@@ -20,18 +20,21 @@ The archive grows one file per day. Each page links backward to yesterday and to
 
 ## Steering the project
 
-Edit `CLAUDE.md`. That's it.
+Edit `EDITORIAL.md`. That's it.
 
-`CLAUDE.md` is the living editorial config. The generator reads it on every run. You can change:
+`EDITORIAL.md` is the living editorial config. The generator reads it on every run. You can change:
 
 - **Current interests** — creators and movements you want to see more of
 - **Things I'm tired of** — anything you want excluded for a while
 - **Specific pieces** — particular works you'd love to see featured
 - **Editorial voice** — how the notes should read
 - **Format rotation** — which formats to cycle through, and how
+- **Mood rotation** — the wheel of moods and cooldown rules
 - **Notes to the generator** — free-form instructions, experiments, overrides
 
-Changes take effect on the next run. If `CLAUDE.md` and the generator's defaults disagree, `CLAUDE.md` wins.
+Changes take effect on the next run. If `EDITORIAL.md` and the generator's defaults disagree, `EDITORIAL.md` wins.
+
+(`CLAUDE.md` is a separate file with engineering notes for agents helping evolve the project itself — repo layout, invariants, where things live. You don't need to touch it for content changes.)
 
 ## Running manually
 
@@ -66,7 +69,8 @@ archive/            — past entries, one file per day (YYYY-MM-DD.html)
 history.json        — ledger of every entry (drives rotation + archive page)
 styles.css          — shared stylesheet
 template.html       — skeleton the generator fills in
-CLAUDE.md           — edit this to steer the project
+EDITORIAL.md        — edit this to steer what gets featured
+CLAUDE.md           — engineering notes for agents working on the project
 GENERATOR_PROMPT.md — the prompt for the scheduled task
 README.md           — this file
 ```
