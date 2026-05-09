@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Morning Dispatch — {{TITLE}}</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="dispatch">
+
+    <div class="format-label">{{FORMAT}}</div>
+
+    {{MEDIA_BLOCK}}
+
+    <div class="work-info">
+      <div class="work-title">{{TITLE}}</div>
+      <div class="work-creator">{{CREATOR}}, {{YEAR}}</div>
+    </div>
+
+    <div class="note">
+      {{NOTE}}
+    </div>
+
+    <footer class="dispatch-footer">
+      <div class="source-line">{{SOURCE}}</div>
+      <div class="date-line">{{DATE}}</div>
+      {{YESTERDAY_LINK}}
+    </footer>
+
+  </main>
+</body>
+</html>

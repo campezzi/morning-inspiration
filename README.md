@@ -1,0 +1,70 @@
+# Morning Dispatch
+
+A static personal homepage that displays one piece of curated work per day. A new entry appears each morning at 5am — a photograph, a painting, a film still, a passage, a piece of music — with a short note and a link backward to yesterday.
+
+The whole thing is plain HTML and CSS. No JavaScript, no build step, no framework.
+
+## How it works
+
+A scheduled Claude Code task runs daily at 5am. Each run:
+
+1. Reads `CLAUDE.md` for editorial direction
+2. Renames the current `index.html` to `YYYY-MM-DD.html` (yesterday's date)
+3. Picks a format and a work, following the rotation rules
+4. Downloads freely-licensed images to `/media/` (or links out for music/video)
+5. Generates a new `index.html` from `template.html`
+6. Commits and pushes
+
+The archive grows one file per day. Each page links backward to the one before it.
+
+## Steering the project
+
+Edit `CLAUDE.md`. That's it.
+
+`CLAUDE.md` is the living editorial config. The generator reads it on every run. You can change:
+
+- **Current interests** — creators and movements you want to see more of
+- **Things I'm tired of** — anything you want excluded for a while
+- **Specific pieces** — particular works you'd love to see featured
+- **Editorial voice** — how the notes should read
+- **Format rotation** — which formats to cycle through, and how
+- **Notes to the generator** — free-form instructions, experiments, overrides
+
+Changes take effect on the next run. If `CLAUDE.md` and the generator's defaults disagree, `CLAUDE.md` wins.
+
+## Running manually
+
+If you want to trigger a run outside the schedule, use Claude Code in this repo and give it the prompt from `GENERATOR_PROMPT.md`.
+
+## Deploy to GitHub Pages
+
+1. Create a repo named `yourusername.github.io` on GitHub
+2. Push this repo to it:
+   ```
+   git remote add origin git@github.com:yourusername/yourusername.github.io.git
+   git push -u origin main
+   ```
+3. Go to **Settings > Pages** and set source to the `main` branch
+4. The site will be live at `https://yourusername.github.io`
+
+## Set up the scheduled task
+
+1. Go to [claude.ai/code/scheduled](https://claude.ai/code/scheduled)
+2. Create a new scheduled task
+3. Set cadence: **Daily at 5:00 AM** (your local time)
+4. Connect the GitHub repo so the task can read and write to it
+5. Copy the prompt from `GENERATOR_PROMPT.md` and paste it in
+6. Run once manually to verify everything works before letting it run on schedule
+
+## Repo structure
+
+```
+index.html          — today's entry
+2026-05-08.html     — yesterday (and so on, one file per day)
+styles.css          — shared stylesheet
+template.html       — skeleton the generator fills in
+media/              — downloaded images
+CLAUDE.md           — edit this to steer the project
+GENERATOR_PROMPT.md — the prompt for the scheduled task
+README.md           — this file
+```
