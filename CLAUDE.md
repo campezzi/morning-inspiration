@@ -12,7 +12,7 @@ Mix in contemporary and living artists alongside the classics. I want to stay co
 - Film: Lynch, Scorsese, Tarkovsky, Antonioni, Wong Kar-wai, Cassavetes, the Coens, Lanthimos
 - Music: DJ Shadow, The White Stripes, Angine de Poitrine, Portishead, Massive Attack, Tom Waits, Nick Cave, Boards of Canada, Jeff Buckley, Kraftwerk, jazz, blues
 - Writing: Edgar Allan Poe, Borges, Calvino, Carver, Sebald, Didion, McCarthy, Murakami, Bukowski, Kafka, artist interviews
-- Motorsport: Senna, F1 history, endurance racing, specific laps with weight
+- Motorsport: Senna, F1 history, endurance racing, famous laps and decisive moments
 - Painting: Hopper, Hammershøi, Goya, Bacon, Rothko, Agnes Martin, Van Gogh, Warhol, Banksy, Basquiat, Japanese woodblock, religious iconography
 - Surreal: Magritte, de Chirico, Buñuel, Švankmajer, outsider art, liminal spaces
 - Sculpture/installation: Richard Serra, James Turrell, Anish Kapoor, Walter De Maria, land art
@@ -36,14 +36,25 @@ If anything here fits the next slot, prioritize it.
 
 ## Editorial voice
 - 3–5 sentences for the note
-- Spare, reverent, observational
-- Describe what's there before interpreting
+- Spare and observational
+- Lead with what's in the work
 - One concrete detail beats one abstract claim
 - No "this reminds us that…", no "we can learn…", no "in a world where…"
-- It's fine to be quiet, slow, and to leave things unresolved
+- Match the register to the work and the mood — a Mel Brooks routine doesn't deserve the same tone as a Hammershøi interior. Don't force a tidy ending.
 
 ## Format rotation
 Pick randomly from: photograph, architecture, film, music, passage, motorsport, painting, surreal, sculpture/installation, design, retro sci-fi, video game, comic, comedy, street photography, portrait. No format repeats within a 3-day window (if painting runs Monday, it can't reappear until Thursday). Don't repeat the same creator within ~30 days.
+
+## Mood rotation
+Each entry is written in one of these moods, picked at random with the constraint that no mood repeats within a 4-day window. Mood is chosen *first*, then format follows with a loose bias (e.g. a "playful" day leans toward comedy/games/design but isn't restricted to them — surprise pairings are welcome). Mood is internal — never displayed on the page.
+
+- **contemplative** — quiet, still, attentive (Hammershøi, Zumthor, Agnes Martin, Sebald)
+- **playful** — warm, light, has fun (Mel Brooks, Calvino, Munari, demoscene)
+- **wry** — dry, observational, sly half-smile (Larry David, Borges, Hopper as deadpan)
+- **bold** — heavy, confrontational, full-volume (Goya, Bacon, Serra, McCarthy, Senna)
+- **restless** — kinetic, propulsive, alive (jazz, Cassavetes, street photography, Moriyama)
+- **melancholic** — sad, lonely, lingering (Hopper, Buckley, Wong Kar-wai, Portishead)
+- **uncanny** — strange, dreamlike, off-balance (Lynch, Magritte, Švankmajer, liminal spaces)
 
 ## Notes to the generator
 Anything I want to flag, experiment with, or change. Free-form.
