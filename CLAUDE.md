@@ -33,6 +33,19 @@ The scheduled agent reads `EDITORIAL.md` + `history.json`, picks a mood (cooldow
 - **Archived files use `../styles.css`.** When moving `index.html` → `archive/YYYY-MM-DD.html`, the stylesheet href must be rewritten.
 - **Cooldowns live in `EDITORIAL.md`.** Format: 3-day window. Mood: 4-day window. Creator: ~30 days. The generator reads these from `EDITORIAL.md` — don't hardcode them in the prompt or anywhere else.
 
+## Editorial vs. mechanical — keep them separate
+
+This is the load-bearing rule for changes to this project. `GENERATOR_PROMPT.md` should stay **content-agnostic**: it covers mechanics (file paths, JSON shape, media markup, verification, push, idempotency). `EDITORIAL.md` carries everything that expresses *taste* — what to feature, the mood wheel, the format wheel, mood↔format pairings, mood↔register pairings, voice rules, exclusions.
+
+A user cloning this repo to run their own dispatch should only need to edit `EDITORIAL.md` to change what gets featured and how it sounds. They should never need to touch `GENERATOR_PROMPT.md`.
+
+Rule of thumb when adding or moving instructions:
+
+- Names a specific creator, mood, format, register, or "this kind of work"? → `EDITORIAL.md`
+- Names a file path, JSON field, HTML markup, step in the daily flow, or operational invariant? → `GENERATOR_PROMPT.md`
+
+When in doubt, the test is: *would this instruction make sense in a totally different person's clone of the repo?* If yes, it's mechanical. If it would feel weird or impose your taste on them, it's editorial.
+
 ## Where to make different kinds of changes
 
 - *"I want different kinds of content"* → `EDITORIAL.md`

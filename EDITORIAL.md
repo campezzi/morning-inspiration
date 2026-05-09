@@ -46,7 +46,7 @@ If anything here fits the next slot, prioritize it.
 Pick randomly from: photograph, architecture, film, music, passage, motorsport, painting, surreal, sculpture/installation, design, retro sci-fi, video game, comic, comedy, street photography, portrait. No format repeats within a 3-day window (if painting runs Monday, it can't reappear until Thursday). Don't repeat the same creator within ~30 days.
 
 ## Mood rotation
-Each entry is written in one of these moods, picked at random with the constraint that no mood repeats within a 4-day window. Mood is chosen *first*, then format follows with a loose bias (e.g. a "playful" day leans toward comedy/games/design but isn't restricted to them — surprise pairings are welcome). Mood is internal — never displayed on the page.
+Each entry is written in one of these moods, picked at random with the constraint that no mood repeats within a 4-day window. Mood is chosen *first*, then format follows with a loose bias (see "Mood → format leans" below). Mood is internal — never displayed on the page.
 
 - **contemplative** — quiet, still, attentive (Hammershøi, Zumthor, Agnes Martin, Sebald)
 - **playful** — warm, light, has fun (Mel Brooks, Calvino, Munari, demoscene)
@@ -55,6 +55,28 @@ Each entry is written in one of these moods, picked at random with the constrain
 - **restless** — kinetic, propulsive, alive (jazz, Cassavetes, street photography, Moriyama)
 - **melancholic** — sad, lonely, lingering (Hopper, Buckley, Wong Kar-wai, Portishead)
 - **uncanny** — strange, dreamlike, off-balance (Lynch, Magritte, Švankmajer, liminal spaces)
+
+### Mood → format leans
+Biases for picking the format after the mood is chosen — never restrictive. Surprise pairings (e.g. *playful* + architecture, *contemplative* + comedy) are welcome when the work earns it.
+
+- **contemplative** → painting, photography, architecture, passage
+- **playful** → comedy, video game, design, comic, retro sci-fi
+- **wry** → comedy, passage, street photography, painting
+- **bold** → painting, sculpture/installation, motorsport, music, passage
+- **restless** → music, street photography, film, motorsport
+- **melancholic** → photograph, film, music, painting, passage
+- **uncanny** → surreal, film, painting, comic, retro sci-fi
+
+### Mood → prose register
+The note's tone should follow the mood's character — let it shape sentence rhythm, what details you notice, and how openly warmth or weight enters the prose. Don't slap the mood on as a label.
+
+- **contemplative** — still, attentive, no hurry; the Hammershøi register
+- **playful** — actual jokes or visible warmth; lighter sentence rhythm
+- **wry** — half-smile; observational with a raised eyebrow, never warm
+- **bold** — doesn't apologize for weight or volume
+- **restless** — kept moving; sentences propulsive, unsettled
+- **melancholic** — sadness allowed to sit; no resolution forced
+- **uncanny** — leaves things unresolved on purpose; off-balance
 
 ## Notes to the generator
 Anything I want to flag, experiment with, or change. Free-form.

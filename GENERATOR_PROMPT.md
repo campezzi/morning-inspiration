@@ -46,17 +46,7 @@ Pick a format from the rotation list in `EDITORIAL.md`, with these constraints:
 - Honor "things I'm tired of" exclusions
 - Prioritize anything listed in "specific pieces I'd love to see"
 
-**Mood biases the format choice loosely.** Each mood pulls toward certain formats but never restricts to them — a surprise pairing (e.g. *playful* + architecture, or *contemplative* + comedy) is welcome when it works. Rough biases:
-
-- *contemplative* → painting, photography, architecture, passage
-- *playful* → comedy, video game, design, comic, retro sci-fi
-- *wry* → comedy, passage, street photography, painting
-- *bold* → painting, sculpture/installation, motorsport, music, passage
-- *restless* → music, street photography, film, motorsport
-- *melancholic* → photograph, film, music, painting, passage
-- *uncanny* → surreal, film, painting, comic, retro sci-fi
-
-These are leans, not rules. If the right work for today's mood is in a different format, take it.
+**Mood biases the format choice loosely.** Use the "Mood → format leans" table in `EDITORIAL.md` — these are biases, not restrictions. If the right work for today's mood is in a different format, take it.
 
 ## Step 6 — Select a work
 
@@ -82,9 +72,7 @@ Follow the editorial voice rules from `EDITORIAL.md`. Default rules unless overr
 - No "this reminds us that…", no "we can learn…", no "in a world where…"
 - Don't force a tidy ending
 
-**The note's register should match today's mood.** Don't slap the mood on as a label — let it shape sentence rhythm, what details you notice, and how openly you let warmth or weight into the prose. A *contemplative* note is the Hammershøi register: still, attentive, no hurry. A *playful* note has actual jokes or warmth. A *wry* note keeps a half-smile. A *bold* note doesn't apologize for weight. A *restless* note keeps moving. A *melancholic* note lets sadness sit. An *uncanny* note leaves things unresolved on purpose.
-
-If the resulting prose ends up reading like a museum wall card regardless of mood, you got it wrong — try again.
+**The note's register should match today's mood.** Use the "Mood → prose register" guide in `EDITORIAL.md` for per-mood direction. If the resulting prose ends up reading like a museum wall card regardless of mood, you got it wrong — try again.
 
 ## Step 9 — Generate index.html
 
