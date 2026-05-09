@@ -5,6 +5,8 @@ This file steers the daily generator. Edit it any time. Changes take effect on t
 ## Current interests
 Things I'm drawn to right now. Add, remove, reorder freely. Named artists are starting points, not boundaries — use them to understand the taste, then surprise me with adjacent things I haven't heard of yet. Discovery is the whole point.
 
+Mix in contemporary and living artists alongside the classics. I want to stay connected to what's happening now — emerging photographers, new albums, recent films, young painters — not just look backward. Don't overdo it, but keep me evolving. A surprise from someone working right now is worth more than another safe canonical pick.
+
 - Photography: Saul Leiter, Daido Moriyama, Todd Hido, Luigi Ghirri, Rinko Kawauchi, Stephen Shore, Vivian Maier, Alec Soth, William Eggleston, Gregory Crewdson, Sebastião Salgado
 - Architecture: Tadao Ando, Carlo Scarpa, Peter Zumthor, Sigurd Lewerentz, Brutalism, Japanese minimalism, racetrack architecture
 - Film: Lynch, Scorsese, Tarkovsky, Antonioni, Wong Kar-wai, Cassavetes, the Coens, Lanthimos
