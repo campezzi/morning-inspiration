@@ -22,6 +22,7 @@ Mix in contemporary and living artists alongside the classics. I want to stay co
 - Comics: Moebius, Katsuhiro Otomo, Enki Bilal, Jack Kirby, European bande dessinée, underground comix
 - Comedy: Mel Brooks, Larry David, Jerry Seinfeld, Louis CK, stand-up specials, comedic writing
 - Street photography: urban life, Fitzroy/Melbourne vibes, candid moments, city textures
+- Portraits: classic and contemporary actresses, alternative looks, artistic fashion photography. Tasteful only — nothing risqué. Think Avedon, Leibovitz, Paolo Roversi, Peter Lindbergh, Helmut Newton (the restrained side), Deborah Turbeville. Subjects like Monica Bellucci, Charlotte Gainsbourg, Tilda Swinton, Saoirse Ronan, Léa Seydoux, Greta Garbo, Anna Karina, emerging faces from independent film
 
 ## Things I'm tired of
 Don't surface these for a while.
@@ -42,7 +43,7 @@ If anything here fits the next slot, prioritize it.
 - It's fine to be quiet, slow, and to leave things unresolved
 
 ## Format rotation
-Cycle through: photograph, architecture, film, music, passage, motorsport, painting, surreal, sculpture/installation, design, retro sci-fi, video game, comic, comedy, street photography. Don't repeat the same format two days in a row. Don't repeat the same creator within ~30 days. Occasional shuffles are welcome — surprise is part of the point.
+Pick randomly from: photograph, architecture, film, music, passage, motorsport, painting, surreal, sculpture/installation, design, retro sci-fi, video game, comic, comedy, street photography, portrait. No format repeats within a 3-day window (if painting runs Monday, it can't reappear until Thursday). Don't repeat the same creator within ~30 days.
 
 ## Notes to the generator
 Anything I want to flag, experiment with, or change. Free-form.
