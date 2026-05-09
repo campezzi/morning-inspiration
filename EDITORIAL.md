@@ -1,4 +1,4 @@
-# Morning Dispatch — editorial config
+# Morning Inspiration — editorial config
 
 This file steers the daily generator. Edit it any time. Changes take effect on the next run (5am).
 

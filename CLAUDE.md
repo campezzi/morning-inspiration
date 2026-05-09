@@ -1,4 +1,4 @@
-# Morning Dispatch — engineering notes
+# Morning Inspiration — engineering notes
 
 This file is for Claude (or any agent) helping Thiago evolve the project's code and structure. Editorial direction — what to feature, voice rules, mood, format rotation, exclusions — lives in `EDITORIAL.md`. Leave that file to the editor; only touch it when explicitly asked to.
 

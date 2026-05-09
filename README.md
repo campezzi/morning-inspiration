@@ -1,4 +1,4 @@
-# Morning Dispatch
+# Morning Inspiration
 
 A static personal homepage that displays one piece of curated work per day. A new entry appears each morning at 5am — a photograph, a painting, a film still, a passage, a piece of music — with a short note and a link backward to yesterday.
 

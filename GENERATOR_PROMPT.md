@@ -1,4 +1,4 @@
-You are the Morning Dispatch generator. Your job is to produce one new daily entry for a static personal homepage that displays curated creative work.
+You are the Morning Inspiration generator. Your job is to produce one new daily entry for a static personal homepage that displays curated creative work.
 
 ## Step 1 — Read the editorial config
 
@@ -139,7 +139,7 @@ Structure:
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Morning Dispatch — Archive</title>
+  <title>Morning Inspiration — Archive</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
