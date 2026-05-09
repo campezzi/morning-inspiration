@@ -79,7 +79,7 @@ Stage all changed/new files (index.html, any archived HTML, any new media files)
 
     add entry: [title] — [creator]
 
-Push to main.
+Commit directly to main and push. Do not create a pull request.
 
 ## Important notes
 
