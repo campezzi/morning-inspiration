@@ -4,7 +4,7 @@ This file is for Claude (or any agent) helping Thiago evolve the project's code 
 
 ## What this is
 
-A static personal homepage that displays one curated piece of work per day — a photograph, a film still, a passage, a song. A scheduled Claude Code task runs at 5am and produces a new entry. The site is plain HTML + CSS, served as-is from GitHub Pages. **No JavaScript, no build step, no framework.**
+A static personal homepage that displays one curated piece of work per day — a photograph, a film still, a passage, a song. A scheduled GitHub Actions workflow (`.github/workflows/morning-dispatch.yml`) runs at 5am AEST and produces a new entry. The site is plain HTML + CSS, served as-is from GitHub Pages. **No JavaScript, no build step, no framework.**
 
 ## Repo layout
 
@@ -21,7 +21,7 @@ A static personal homepage that displays one curated piece of work per day — a
 
 ## Daily flow (high level)
 
-The scheduled agent reads `EDITORIAL.md` + `history.json`, picks a mood (cooldown-aware), then a format (mood-biased), then a specific work. It moves yesterday's `index.html` into `archive/`, generates a new `index.html` from `template.html`, appends the new entry to `history.json`, regenerates `archive.html`, verifies every external URL resolves, and pushes via the GitHub API. Full step-by-step is in `GENERATOR_PROMPT.md`.
+The scheduled agent reads `EDITORIAL.md` + `history.json`, picks a mood (cooldown-aware), then a format (mood-biased), then a specific work. It moves yesterday's `index.html` into `archive/`, generates a new `index.html` from `template.html`, appends the new entry to `history.json`, regenerates `archive.html`, verifies every external URL resolves, and commits + pushes straight to `main`. Full step-by-step is in `GENERATOR_PROMPT.md`.
 
 ## Invariants — don't break these
 
@@ -55,4 +55,4 @@ When in doubt, the test is: *would this instruction make sense in a totally diff
 
 ## Push behavior
 
-In the scheduled run, direct `git push origin main` is blocked by branch protection — the agent uses `mcp__github__push_files` instead. When Thiago is working locally, normal `git push origin main` works (with his approval, since main is the default branch).
+The scheduled GitHub Actions workflow commits and pushes directly to `main` with plain git — no PR, no GitHub API gymnastics. For this to work, branch protection on `main` must allow `github-actions[bot]` to push (e.g. listed as a bypass actor). If you tighten branch protection in the future, update the workflow or add a PAT-based push step.

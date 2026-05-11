@@ -1,0 +1,42 @@
+name: Morning Dispatch
+
+# Runs the daily generator from GENERATOR_PROMPT.md.
+# Cron is UTC. 19:00 UTC = 05:00 AEST (Sydney winter / UTC+10).
+# When AEDT (daylight saving, UTC+11) kicks in, change to 18:00 UTC,
+# or set both crons if you don't mind it shifting twice a year.
+on:
+  schedule:
+    - cron: "0 19 * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+  id-token: write
+
+concurrency:
+  group: morning-dispatch
+  cancel-in-progress: false
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: true
+
+      - name: Configure git author
+        run: |
+          git config user.name "morning-dispatch-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      - uses: anthropics/claude-code-action@v1
+        with:
+          claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          prompt: |
+            Read `GENERATOR_PROMPT.md` and execute it end-to-end. `EDITORIAL.md` is the source of truth for what to feature and how the note should read.
+          claude_args: |
+            --max-turns 60
+            --allowedTools Read,Write,Edit,Bash,WebFetch,WebSearch
