@@ -28,5 +28,15 @@
     "year": 1984,
     "source_name": "Wikipedia",
     "source_url": "https://en.wikipedia.org/wiki/1984_Monaco_Grand_Prix"
+  },
+  {
+    "date": "2026-05-11",
+    "mood": "uncanny",
+    "format": "Surreal",
+    "title": "The Mystery and Melancholy of a Street",
+    "creator": "Giorgio de Chirico",
+    "year": 1914,
+    "source_name": "Wikipedia",
+    "source_url": "https://en.wikipedia.org/wiki/The_Mystery_and_Melancholy_of_a_Street"
   }
 ]
