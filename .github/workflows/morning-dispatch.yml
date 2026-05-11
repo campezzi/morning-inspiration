@@ -21,6 +21,12 @@ jobs:
   generate:
     runs-on: ubuntu-latest
     timeout-minutes: 25
+    env:
+      # Align the runner's clock with the curator's local time so `date`,
+      # the agent, and the post-step all agree on what "today" means.
+      # Without this, a cron firing at 19:00 UTC is "still yesterday" to
+      # processes on the runner, and Step 2's idempotency check trips.
+      TZ: Australia/Sydney
     steps:
       - uses: actions/checkout@v4
         with:
