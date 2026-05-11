@@ -8,7 +8,7 @@ Read `EDITORIAL.md` in the repo root. This is the source of truth for what to fe
 
 If `index.html` exists, determine yesterday's date and move it to `archive/YYYY-MM-DD.html` (e.g. `archive/2026-05-09.html`). Create the `archive/` directory if it doesn't already exist.
 
-When moving the file, change its `<link rel="stylesheet" href="styles.css">` to `<link rel="stylesheet" href="../styles.css">` so the relocated file still finds the stylesheet.
+All site-internal hrefs in the page are root-relative (e.g. `/styles.css`, `/archive.html`, `/archive/YYYY-MM-DD.html`), so the file works identically at either path — no link rewriting is needed when moving it.
 
 If `archive/YYYY-MM-DD.html` already exists for yesterday, the task already ran today — exit immediately without making any changes.
 
@@ -88,7 +88,7 @@ Use `template.html` as the structural reference. Fill in:
 - `{{NOTE}}` — the note, wrapped in `<p>` tags
 - `{{SOURCE}}` — attribution line with link
 - `{{DATE}}` — today's date, formatted like "9 May 2026"
-- `{{YESTERDAY_LINK}}` — `<a class="yesterday-link" href="archive/YYYY-MM-DD.html">yesterday</a>` pointing to the file just archived
+- `{{YESTERDAY_LINK}}` — `<a class="yesterday-link" href="/archive/YYYY-MM-DD.html">yesterday</a>` pointing to the file just archived
 
 The template already includes the archive link next to `{{YESTERDAY_LINK}}` — leave it alone. The mood is **not** rendered anywhere in the HTML.
 
@@ -116,7 +116,7 @@ The template already includes the archive link next to `{{YESTERDAY_LINK}}` — 
 </div>
 ```
 
-Write the complete HTML file as `index.html`. Do not use JavaScript. Link to `styles.css` (relative path, since `index.html` lives at the repo root).
+Write the complete HTML file as `index.html`. Do not use JavaScript. All site-internal hrefs (stylesheet, archive link, yesterday link) must be root-relative — `/styles.css`, `/archive.html`, `/archive/YYYY-MM-DD.html` — so the same markup works whether the file lives at the repo root or under `archive/`.
 
 ## Step 10 — Append to the ledger
 
@@ -135,7 +135,7 @@ Structure:
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Morning Inspiration — Archive</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
   <main class="dispatch archive">
@@ -159,7 +159,7 @@ Structure:
     </section>
 
     <footer class="dispatch-footer">
-      <a class="yesterday-link" href="index.html">today</a>
+      <a class="yesterday-link" href="/index.html">today</a>
     </footer>
 
   </main>
@@ -167,9 +167,9 @@ Structure:
 </html>
 ```
 
-Link targets:
-- The most recent entry (today's, just generated) links to `index.html`
-- All other entries link to `archive/YYYY-MM-DD.html`
+Link targets (all root-relative):
+- The most recent entry (today's, just generated) links to `/index.html`
+- All other entries link to `/archive/YYYY-MM-DD.html`
 
 The archive page must not display the mood — it's internal.
 

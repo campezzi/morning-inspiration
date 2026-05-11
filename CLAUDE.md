@@ -30,7 +30,7 @@ The scheduled agent reads `EDITORIAL.md` + `history.json`, picks a mood (cooldow
 - **Mood is internal.** Stored in `history.json` to steer selection and prose, but never rendered on the page.
 - **Pre-push link verification is mandatory and automated.** Every external URL in `index.html` is fetched before push; broken links cause the work to be silently swapped, not surfaced for review. See Step 12 of `GENERATOR_PROMPT.md`.
 - **`styles.css` is shared.** Don't modify it for routine entries — only when `EDITORIAL.md` explicitly asks for a design change.
-- **Archived files use `../styles.css`.** When moving `index.html` → `archive/YYYY-MM-DD.html`, the stylesheet href must be rewritten.
+- **All site-internal hrefs are root-relative** (`/styles.css`, `/archive.html`, `/archive/YYYY-MM-DD.html`, `/index.html`). The same markup works whether the file lives at the repo root or under `archive/`, so no link rewriting is needed when moving `index.html` into the archive.
 - **Cooldowns live in `EDITORIAL.md`.** Format: 3-day window. Mood: 4-day window. Creator: ~30 days. The generator reads these from `EDITORIAL.md` — don't hardcode them in the prompt or anywhere else.
 
 ## Editorial vs. mechanical — keep them separate
