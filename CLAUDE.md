@@ -21,7 +21,7 @@ A static personal homepage that displays one curated piece of work per day — a
 
 ## Daily flow (high level)
 
-The scheduled agent reads `EDITORIAL.md` + `history.json`, picks a mood (cooldown-aware), then a format (mood-biased), then a specific work. It moves yesterday's `index.html` into `archive/`, generates a new `index.html` from `template.html`, appends the new entry to `history.json`, regenerates `archive.html`, verifies every external URL resolves, and commits + pushes straight to `main`. Full step-by-step is in `GENERATOR_PROMPT.md`.
+The scheduled agent reads `EDITORIAL.md` + `history.json`, picks a mood (cooldown-aware), then a format (mood-biased), then a specific work. It moves yesterday's `index.html` into `archive/`, generates a new `index.html` from `template.html`, appends the new entry to `history.json`, regenerates `archive.html`, verifies every external URL resolves, and commits on a dispatch branch. The workflow then opens a PR to `main` and squash-merges it. Full step-by-step is in `GENERATOR_PROMPT.md`.
 
 ## Invariants — don't break these
 
@@ -55,4 +55,8 @@ When in doubt, the test is: *would this instruction make sense in a totally diff
 
 ## Push behavior
 
-The scheduled GitHub Actions workflow commits and pushes directly to `main` with plain git — no PR, no GitHub API gymnastics. For this to work, branch protection on `main` must allow `github-actions[bot]` to push (e.g. listed as a bypass actor). If you tighten branch protection in the future, update the workflow or add a PAT-based push step.
+The scheduled GitHub Actions workflow checks out a fresh `dispatch/<date>-<run>` branch, the agent commits onto it, then the workflow shell pushes the branch, opens a PR against `main`, and squash-merges it (`gh pr merge --squash --delete-branch`). This satisfies branch-protection-by-PR without needing bypass actors or a PAT.
+
+Prerequisites in repo settings:
+- **Settings → Actions → General** → "Allow GitHub Actions to create and approve pull requests" must be enabled.
+- The branch protection rule on `main` must allow `github-actions[bot]` (or the workflow's PR approval) to satisfy whatever it requires. If you add required reviewers or status checks that the bot can't satisfy, the merge step will fail loudly — fix the setting rather than bypass the rule.

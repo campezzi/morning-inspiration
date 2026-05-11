@@ -2,8 +2,7 @@ name: Morning Dispatch
 
 # Runs the daily generator from GENERATOR_PROMPT.md.
 # Cron is UTC. 19:00 UTC = 05:00 AEST (Sydney winter / UTC+10).
-# When AEDT (daylight saving, UTC+11) kicks in, change to 18:00 UTC,
-# or set both crons if you don't mind it shifting twice a year.
+# When AEDT (daylight saving, UTC+11) kicks in, change to 18:00 UTC.
 on:
   schedule:
     - cron: "0 19 * * *"
@@ -11,6 +10,7 @@ on:
 
 permissions:
   contents: write
+  pull-requests: write
   id-token: write
 
 concurrency:
@@ -32,6 +32,13 @@ jobs:
           git config user.name "morning-dispatch-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
+      - name: Create dispatch branch
+        id: branch
+        run: |
+          BRANCH="dispatch/$(date -u +%Y-%m-%d)-${{ github.run_number }}"
+          git checkout -b "$BRANCH"
+          echo "name=$BRANCH" >> "$GITHUB_OUTPUT"
+
       - uses: anthropics/claude-code-action@v1
         with:
           claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
@@ -40,3 +47,29 @@ jobs:
           claude_args: |
             --max-turns 60
             --allowedTools Read,Write,Edit,Bash,WebFetch,WebSearch
+
+      - name: Commit, push, open PR, merge
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          BRANCH="${{ steps.branch.outputs.name }}"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "Working tree clean — idempotent exit (Step 2 short-circuit)."
+            exit 0
+          fi
+          TITLE=$(jq -r '.[-1].title' history.json)
+          CREATOR=$(jq -r '.[-1].creator' history.json)
+          MSG="add entry: ${TITLE} — ${CREATOR}"
+          git commit -m "$MSG"
+          git push -u origin HEAD
+          gh pr create \
+            --base main \
+            --head "$BRANCH" \
+            --title "$MSG" \
+            --body "Automated entry from the morning-dispatch workflow."
+          gh pr merge "$BRANCH" \
+            --squash \
+            --delete-branch \
+            --subject "$MSG"
