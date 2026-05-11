@@ -58,9 +58,12 @@ Choose a specific, real work in the selected format that fits the mood. Prioriti
 
 ## Step 7 — Handle media
 
-- **Images (photographs, paintings, architecture):** Outbound image downloads are blocked in this environment — do not attempt to download files locally. Find a freely-licensed image and reference its external URL directly in `<img src>`. Browsers load these client-side, so external URLs work fine. Good sources: Wikimedia Commons (`https://upload.wikimedia.org/wikipedia/commons/...`), Met Open Access (`https://images.metmuseum.org/...`), Art Institute of Chicago IIIF (`https://www.artic.edu/iiif/2/{uuid}/full/843,/0/default.jpg`), Internet Archive, Rijksmuseum Open Access. If no freely-licensed image is available, fall back to the external-link markup linking to the source page.
-- **Music/video:** Never embed or download. Link to a canonical source (artist site, label page, Bandcamp, Internet Archive). Use the external-link markup in the media block.
-- **Passages:** Include full text only for public-domain works. For copyrighted works, excerpt 1–2 sentences and link to the full text. Use the passage/blockquote markup.
+**Every entry must include an image.** For visually-native formats (photograph, painting, film still, sculpture, architecture) the image *is* the work. For other formats — music, passages, motorsport, anything where the work isn't itself an image — pair the entry with a contextual image: an album cover, a performance still, a film poster, a portrait of the author, a photograph of the event, a press shot, a period illustration. The goal is to put the work in the room with the reader. Never run a text-only or link-only page.
+
+- **Sourcing images:** Outbound image downloads are blocked in this environment — do not attempt to download files locally. Find a freely-licensed (or otherwise reusable) image and reference its external URL directly in `<img src>`. Browsers load these client-side, so hotlinking works fine. Good sources: Wikimedia Commons (`https://upload.wikimedia.org/wikipedia/commons/...`), Met Open Access (`https://images.metmuseum.org/...`), Art Institute of Chicago IIIF (`https://www.artic.edu/iiif/2/{uuid}/full/843,/0/default.jpg`), Internet Archive, Rijksmuseum Open Access, official artist/label/publisher pages. Wikipedia article images are almost always Wikimedia-hosted and safe to hotlink.
+- **Music/video:** Never embed or download the work itself. Pair a contextual image (album cover, performance photo, artist portrait) with a link to a canonical source (artist site, label page, Bandcamp, Internet Archive).
+- **Passages:** Include full text only for public-domain works. For copyrighted works, excerpt 1–2 sentences and link to the full text. Pair the passage with a contextual image — book cover, author portrait, period illustration, manuscript page.
+- **Image quality matters.** Choose images that are sharp, well-framed, and large enough to render at the layout's `max-height: 75vh`. Avoid thumbnails, watermarked stock, and low-res scans when a better version exists. The image carries the page visually — don't settle for a placeholder.
 
 ## Step 8 — Write the note
 
@@ -89,20 +92,24 @@ Use `template.html` as the structural reference. Fill in:
 
 The template already includes the archive link next to `{{YESTERDAY_LINK}}` — leave it alone. The mood is **not** rendered anywhere in the HTML.
 
-**Media block patterns:**
+**Media block patterns.** Every pattern includes an `<img>`. Pick the one that matches the format.
 
 ```html
-<!-- Image with external URL (photograph, painting, architecture) -->
+<!-- Image-native works (photograph, painting, sculpture, architecture, film still) -->
 <div class="media">
   <img src="https://external-source.org/path/to/image.jpg" alt="Description of the work">
 </div>
 
-<!-- Music / video / external link -->
+<!-- Music / video / motorsport / any work the user needs to follow a link to experience -->
 <div class="media">
+  <img src="https://external-source.org/path/to/image.jpg" alt="Description of the image">
   <a class="external-link" href="https://canonical-source.com/" target="_blank" rel="noopener">Listen: Title — Creator</a>
 </div>
 
-<!-- Passage / text -->
+<!-- Passage / text — contextual image first, then the blockquote -->
+<div class="media">
+  <img src="https://external-source.org/path/to/image.jpg" alt="Description of the image">
+</div>
 <div class="passage">
   <blockquote>The quoted text goes here.</blockquote>
   <div class="passage-source">— Author, <em>Work Title</em> (Year)</div>

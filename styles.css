@@ -84,6 +84,11 @@ body {
   transition: color 0.2s, border-color 0.2s;
 }
 
+.media img + .external-link {
+  display: inline-block;
+  margin-top: 1rem;
+}
+
 .media .external-link:hover {
   color: var(--text);
   border-color: var(--text-muted);
