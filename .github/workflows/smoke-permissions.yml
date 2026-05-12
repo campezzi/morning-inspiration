@@ -73,10 +73,9 @@ jobs:
           set -euo pipefail
           BRANCH="${{ steps.branch.outputs.name }}"
           git push -u origin HEAD
-          echo "--- Trying REST POST /pulls (clearer error than gh pr create) ---"
-          gh api "repos/${GITHUB_REPOSITORY}/pulls" -X POST \
-            -f title="smoke: permissions verification" \
-            -f head="$BRANCH" \
-            -f base="main" \
-            -f body="Dummy run."
+          gh pr create \
+            --base main \
+            --head "$BRANCH" \
+            --title "smoke: permissions verification" \
+            --body "Dummy run from .github/workflows/smoke-permissions.yml."
           gh pr merge "$BRANCH" --squash --delete-branch
