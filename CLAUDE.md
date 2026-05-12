@@ -4,14 +4,14 @@ This file is for Claude (or any agent) helping Thiago evolve the project's code 
 
 ## What this is
 
-A static personal homepage that displays one curated piece of work per day — a photograph, a film still, a passage, a song. A scheduled GitHub Actions workflow (`.github/workflows/morning-dispatch.yml`) runs at 5am AEST and produces a new entry. The site is plain HTML + CSS, served as-is from GitHub Pages. **No JavaScript, no build step, no framework.**
+A static personal homepage that displays one curated piece of work per day — a photograph, a film still, a passage, a song. A scheduled GitHub Actions workflow (`.github/workflows/morning-dispatch.yml`) runs at 5am AEST and produces a new entry. The site is plain HTML + CSS, served as-is from GitHub Pages. **No build step, no framework.** Entry pages are pure HTML + CSS; `archive.html` carries a small inline script that renders the calendar from `history.json` in the browser.
 
 ## Repo layout
 
 - `index.html` — today's entry
 - `archive/YYYY-MM-DD.html` — past entries, one file per day
-- `archive.html` — chronological index of every past entry, regenerated each run
-- `history.json` — ledger of every entry (date, mood, format, creator, title, year, source). Drives the cooldowns and the archive page.
+- `archive.html` — static calendar shell. Fetches `history.json` in the browser and renders the grid client-side. The daily generator does **not** touch this file.
+- `history.json` — ledger of every entry (date, mood, format, creator, title, year, source, image_url). Drives the cooldowns and is the data source the archive page renders from.
 - `template.html` — skeleton the generator fills in to produce `index.html`
 - `styles.css` — shared stylesheet, used by every page
 - `EDITORIAL.md` — editorial direction. The user edits this freely; the daily generator reads it on every run.
@@ -21,14 +21,14 @@ A static personal homepage that displays one curated piece of work per day — a
 
 ## Daily flow (high level)
 
-The scheduled agent reads `EDITORIAL.md` + `history.json`, picks a mood (cooldown-aware), then a format (mood-biased), then a specific work. It moves yesterday's `index.html` into `archive/`, generates a new `index.html` from `template.html`, appends the new entry to `history.json`, regenerates `archive.html`, verifies every external URL resolves, and commits on a dispatch branch. The workflow then opens a PR to `main` and squash-merges it. Full step-by-step is in `GENERATOR_PROMPT.md`.
+The scheduled agent reads `EDITORIAL.md` + `history.json`, picks a mood (cooldown-aware), then a format (mood-biased), then a specific work. It moves yesterday's `index.html` into `archive/`, generates a new `index.html` from `template.html`, appends the new entry to `history.json`, verifies every external URL resolves, and commits on a dispatch branch. The workflow then opens a PR to `main` and squash-merges it. `archive.html` is **not** regenerated — it renders the calendar from `history.json` in the browser. Full step-by-step is in `GENERATOR_PROMPT.md`.
 
 ## Invariants — don't break these
 
 - **Idempotency.** If `archive/YYYY-MM-DD.html` already exists for yesterday, the day's run already happened — exit without changes.
-- **No JavaScript.** Pages must be self-contained HTML + CSS.
+- **No JavaScript on entry pages.** `index.html` and per-day archive files must be self-contained HTML + CSS. The single exception is `archive.html`, which carries a small inline script that fetches `history.json` and renders the calendar client-side.
 - **Mood is internal.** Stored in `history.json` to steer selection and prose, but never rendered on the page.
-- **Pre-push link verification is mandatory and automated.** Every external URL in `index.html` is fetched before push; broken links cause the work to be silently swapped, not surfaced for review. See Step 12 of `GENERATOR_PROMPT.md`.
+- **Pre-push link verification is mandatory and automated.** Every external URL in `index.html` is fetched before push; broken links cause the work to be silently swapped, not surfaced for review. See Step 11 of `GENERATOR_PROMPT.md`.
 - **`styles.css` is shared.** Don't modify it for routine entries — only when `EDITORIAL.md` explicitly asks for a design change.
 - **Site-internal hrefs are relative, not root-relative.** The site is a GitHub Pages project page served at `/morning-inspiration/`, so root-relative paths like `/styles.css` resolve to the wrong place. Pages at the repo root use bare names (`styles.css`, `archive.html`, `archive/YYYY-MM-DD.html`); archived pages use `../`-prefixed equivalents and a same-dir sibling for the yesterday link. Step 2 of `GENERATOR_PROMPT.md` rewrites these when moving `index.html` into `archive/`.
 - **Cooldowns live in `EDITORIAL.md`.** Format: 3-day window. Mood: 4-day window. Creator: ~30 days. The generator reads these from `EDITORIAL.md` — don't hardcode them in the prompt or anywhere else.

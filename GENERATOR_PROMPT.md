@@ -33,9 +33,12 @@ Read `history.json` in the repo root. It is a JSON array of past entries, oldest
   "creator": "Creator name",
   "year": 1906,
   "source_name": "Tate, London",
-  "source_url": "https://..."
+  "source_url": "https://...",
+  "image_url": "https://..."
 }
 ```
+
+`image_url` is the same URL written into `index.html`'s `<img src>` for the day. The archive page reads it client-side to render each day's tile.
 
 If the file doesn't exist, treat it as an empty array.
 
@@ -128,60 +131,9 @@ Write the complete HTML file as `index.html`. Do not use JavaScript. Site-intern
 
 ## Step 10 — Append to the ledger
 
-Append today's entry to `history.json`, including the `mood` field. Keep the array in chronological order (oldest first). Match the field names exactly as shown in Step 3.
+Append today's entry to `history.json`, including the `mood` and `image_url` fields. Keep the array in chronological order (oldest first). Match the field names exactly as shown in Step 3. `image_url` must be identical to the URL written into `index.html`'s `<img src>` for today — the archive page reads `history.json` client-side to render each day's tile.
 
-## Step 11 — Regenerate archive.html
-
-Rewrite `archive.html` from scratch using the updated `history.json`. The page is a static index of every past entry.
-
-Structure:
-
-```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Morning Inspiration — Archive</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <main class="dispatch archive">
-
-    <div class="format-label">Archive</div>
-
-    <!-- One <section class="archive-month"> per month, newest month first.
-         Within a month, entries newest-first. -->
-    <section class="archive-month">
-      <h2 class="archive-month-name">May 2026</h2>
-      <ul class="archive-list">
-        <li class="archive-item">
-          <a href="...">
-            <span class="archive-date">9 May</span>
-            <span class="archive-format">Film</span>
-            <span class="archive-title">Fallen Angels</span>
-            <span class="archive-creator">Wong Kar-wai</span>
-          </a>
-        </li>
-      </ul>
-    </section>
-
-    <footer class="dispatch-footer">
-      <a class="yesterday-link" href="index.html">today</a>
-    </footer>
-
-  </main>
-</body>
-</html>
-```
-
-Link targets (all relative, since `archive.html` lives at the repo root):
-- The most recent entry (today's, just generated) links to `index.html`
-- All other entries link to `archive/YYYY-MM-DD.html`
-
-The archive page must not display the mood — it's internal.
-
-## Step 12 — Verify links (automated, no user review)
+## Step 11 — Verify links (automated, no user review)
 
 Before pushing, verify every external URL referenced by the new `index.html` actually resolves. This step is fully automated — do not ask the user to review or confirm anything; just do it and move on if it passes.
 
@@ -196,20 +148,21 @@ If any URL fails:
 2. Try once to find a working replacement URL for the same work (e.g. a different Wikimedia file, a different mirror of the source page). Re-verify.
 3. If you still can't get clean links for this work, silently pick a different work and restart from Step 6 (keep the same mood and format unless the failure suggests the format itself is the problem). Do not feature a work whose links don't resolve.
 
-Only proceed to Step 13 once every URL in `index.html` returns a healthy status. Do not surface intermediate failures to the user — this is housekeeping.
+Only proceed to Step 12 once every URL in `index.html` returns a healthy status. Do not surface intermediate failures to the user — this is housekeeping.
 
-## Step 13 — Hand off
+## Step 12 — Hand off
 
-Once Step 12 passes, your work is done. **Do not touch git in any way** — no `git add`, no `git commit`, no `git push`, no PR. Leave the working tree with all your edits in place; the workflow's next step stages everything, derives a commit message from the new `history.json` entry, commits on the dispatch branch, pushes, opens the PR, and squash-merges it.
+Once Step 11 passes, your work is done. **Do not touch git in any way** — no `git add`, no `git commit`, no `git push`, no PR. Leave the working tree with all your edits in place; the workflow's next step stages everything, derives a commit message from the new `history.json` entry, commits on the dispatch branch, pushes, opens the PR, and squash-merges it.
 
-A typical run leaves `index.html`, `archive/YYYY-MM-DD.html` (yesterday's archived entry), `archive.html`, and `history.json` modified. If Step 2 short-circuited the run (today's entry already exists), the working tree is clean and the workflow will exit cleanly without producing a PR.
+A typical run leaves `index.html`, `archive/YYYY-MM-DD.html` (yesterday's archived entry), and `history.json` modified. `archive.html` is **not** touched — it is a static shell that reads `history.json` in the browser. If Step 2 short-circuited the run (today's entry already exists), the working tree is clean and the workflow will exit cleanly without producing a PR.
 
 ## Important notes
 
 - This task must be **idempotent**. If `archive/YYYY-MM-DD.html` for yesterday already exists, exit without changes.
 - Every work you feature must be **real** — a verifiable piece by a verifiable creator.
 - Mood is **internal** — never display it on the page. It steers selection and prose only.
-- The pre-push verification in Step 12 is mandatory and fully automated. Never push an entry with a broken link — silently swap the work and try again instead.
-- The page must be **self-contained HTML + CSS**. No JavaScript, no build step.
+- The pre-push verification in Step 11 is mandatory and fully automated. Never push an entry with a broken link — silently swap the work and try again instead.
+- The daily entry page (`index.html` and per-day archive files) must be **self-contained HTML + CSS** — no JavaScript. `archive.html` is the lone exception: it ships a small inline script that renders the calendar from `history.json` client-side.
+- Do **not** regenerate `archive.html`. It is a static shell; the daily flow only updates `history.json`, and the archive page picks up the new entry automatically.
 - The `styles.css` file is shared across all pages. Do not modify it unless `EDITORIAL.md` explicitly asks for a design change.
 - Write a thoughtful, genuine note. This is the soul of the project.

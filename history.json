@@ -7,7 +7,8 @@
     "creator": "Vilhelm Hammershøi",
     "year": 1906,
     "source_name": "Tate, London",
-    "source_url": "https://www.tate.org.uk/art/artworks/hammershoi-interior-sunlight-on-the-floor-n04509"
+    "source_url": "https://www.tate.org.uk/art/artworks/hammershoi-interior-sunlight-on-the-floor-n04509",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/7/72/Vilhelm_Hammersh%C3%B8i_%281864-1916%29_-_Interior%2C_Sunlight_on_the_Floor_-_N04509_-_National_Gallery.jpg"
   },
   {
     "date": "2026-05-09",
@@ -17,7 +18,8 @@
     "creator": "Wong Kar-wai",
     "year": 1995,
     "source_name": "The Criterion Collection",
-    "source_url": "https://www.criterion.com/films/28842-fallen-angels"
+    "source_url": "https://www.criterion.com/films/28842-fallen-angels",
+    "image_url": "https://upload.wikimedia.org/wikipedia/en/thumb/0/04/Fallen-Angels-Poster.jpg/500px-Fallen-Angels-Poster.jpg"
   },
   {
     "date": "2026-05-10",
@@ -27,7 +29,8 @@
     "creator": "Ayrton Senna",
     "year": 1984,
     "source_name": "Wikipedia",
-    "source_url": "https://en.wikipedia.org/wiki/1984_Monaco_Grand_Prix"
+    "source_url": "https://en.wikipedia.org/wiki/1984_Monaco_Grand_Prix",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/9/99/Toleman_TG184_front-right_2012_Autosport_International.jpg"
   },
   {
     "date": "2026-05-11",
@@ -37,6 +40,7 @@
     "creator": "Giorgio de Chirico",
     "year": 1914,
     "source_name": "Wikipedia",
-    "source_url": "https://en.wikipedia.org/wiki/Mystery_and_Melancholy_of_a_Street"
+    "source_url": "https://en.wikipedia.org/wiki/Mystery_and_Melancholy_of_a_Street",
+    "image_url": "https://uploads6.wikiart.org/images/giorgio-de-chirico/mystery-and-melancholy-of-a-street-1914.jpg"
   }
 ]

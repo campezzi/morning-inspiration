@@ -11,48 +11,162 @@
 
     <div class="format-label">Archive</div>
 
-    <section class="archive-month">
-      <h2 class="archive-month-name">May 2026</h2>
-      <ul class="archive-list">
-        <li class="archive-item">
-          <a href="index.html">
-            <span class="archive-date">11 May</span>
-            <span class="archive-format">Surreal</span>
-            <span class="archive-title">The Mystery and Melancholy of a Street</span>
-            <span class="archive-creator">Giorgio de Chirico</span>
-          </a>
-        </li>
-        <li class="archive-item">
-          <a href="archive/2026-05-10.html">
-            <span class="archive-date">10 May</span>
-            <span class="archive-format">Motorsport</span>
-            <span class="archive-title">1984 Monaco Grand Prix</span>
-            <span class="archive-creator">Ayrton Senna</span>
-          </a>
-        </li>
-        <li class="archive-item">
-          <a href="archive/2026-05-09.html">
-            <span class="archive-date">9 May</span>
-            <span class="archive-format">Film</span>
-            <span class="archive-title">Fallen Angels</span>
-            <span class="archive-creator">Wong Kar-wai</span>
-          </a>
-        </li>
-        <li class="archive-item">
-          <a href="archive/2026-05-08.html">
-            <span class="archive-date">8 May</span>
-            <span class="archive-format">Painting</span>
-            <span class="archive-title">Interior, Sunlight on the Floor</span>
-            <span class="archive-creator">Vilhelm Hammershøi</span>
-          </a>
-        </li>
-      </ul>
-    </section>
+    <div id="archive-root" class="archive-calendar">
+      <p class="archive-placeholder">Loading…</p>
+    </div>
 
     <footer class="dispatch-footer">
       <a class="yesterday-link" href="index.html">today</a>
     </footer>
 
   </main>
+
+  <script>
+    (function () {
+      var root = document.getElementById('archive-root');
+
+      // Today's date in Australia/Sydney as YYYY-MM-DD. en-CA locale yields YYYY-MM-DD natively.
+      function todayInSydney() {
+        try {
+          return new Date().toLocaleDateString('en-CA', { timeZone: 'Australia/Sydney' });
+        } catch (e) {
+          // Fallback to local date if Intl/timeZone is somehow unavailable
+          var d = new Date();
+          var y = d.getFullYear();
+          var m = String(d.getMonth() + 1).padStart(2, '0');
+          var day = String(d.getDate()).padStart(2, '0');
+          return y + '-' + m + '-' + day;
+        }
+      }
+
+      var TODAY = todayInSydney();
+      var MONTH_NAMES = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+      var WEEKDAYS = ['Mon','Tue','Wed','Thu','Fri','Sat','Sun'];
+
+      function escapeHtml(s) {
+        return String(s)
+          .replace(/&/g, '&amp;')
+          .replace(/</g, '&lt;')
+          .replace(/>/g, '&gt;')
+          .replace(/"/g, '&quot;')
+          .replace(/'/g, '&#39;');
+      }
+
+      // Parse "YYYY-MM-DD" into {year, month (0-11), day}. Avoids Date parsing TZ surprises.
+      function parseDate(str) {
+        var parts = str.split('-');
+        return {
+          year: parseInt(parts[0], 10),
+          month: parseInt(parts[1], 10) - 1,
+          day: parseInt(parts[2], 10)
+        };
+      }
+
+      // 0 = Monday, ..., 6 = Sunday
+      function mondayIndex(year, monthIndex, day) {
+        var jsDay = new Date(year, monthIndex, day).getDay(); // 0=Sun..6=Sat
+        return (jsDay + 6) % 7;
+      }
+
+      function daysInMonth(year, monthIndex) {
+        return new Date(year, monthIndex + 1, 0).getDate();
+      }
+
+      function renderEmpty() {
+        root.innerHTML = '<p class="archive-placeholder">No entries yet.</p>';
+      }
+
+      function renderError() {
+        root.innerHTML = '<p class="archive-placeholder">Archive unavailable.</p>';
+      }
+
+      function render(entries) {
+        if (!Array.isArray(entries) || entries.length === 0) {
+          renderEmpty();
+          return;
+        }
+
+        // Group by YYYY-MM
+        var groups = {};
+        entries.forEach(function (entry) {
+          if (!entry || typeof entry.date !== 'string') return;
+          var key = entry.date.slice(0, 7);
+          if (!groups[key]) groups[key] = {};
+          groups[key][entry.date] = entry;
+        });
+
+        // Sort month keys newest-first
+        var monthKeys = Object.keys(groups).sort(function (a, b) {
+          return a < b ? 1 : a > b ? -1 : 0;
+        });
+
+        var html = '';
+
+        monthKeys.forEach(function (key) {
+          var parts = key.split('-');
+          var year = parseInt(parts[0], 10);
+          var monthIndex = parseInt(parts[1], 10) - 1;
+          var monthEntries = groups[key];
+
+          var monthName = MONTH_NAMES[monthIndex] + ' ' + year;
+          var pad = mondayIndex(year, monthIndex, 1);
+          var total = daysInMonth(year, monthIndex);
+
+          var cells = '';
+          for (var i = 0; i < pad; i++) {
+            cells += '<div class="archive-day empty"></div>';
+          }
+
+          for (var d = 1; d <= total; d++) {
+            var iso = year + '-' + String(monthIndex + 1).padStart(2, '0') + '-' + String(d).padStart(2, '0');
+            var entry = monthEntries[iso];
+            var classes = ['archive-day'];
+            if (entry) classes.push('filled');
+            if (iso === TODAY) classes.push('today');
+
+            if (entry) {
+              var href = (iso === TODAY) ? 'index.html' : 'archive/' + iso + '.html';
+              var img = entry.image_url ? '<img src="' + escapeHtml(entry.image_url) + '" alt="">' : '';
+              var meta = '<div class="meta">' +
+                '<div class="t">' + escapeHtml(entry.title || '') + '</div>' +
+                '<div class="c">' + escapeHtml(entry.creator || '') + '</div>' +
+                '</div>';
+              cells += '<div class="' + classes.join(' ') + '">' +
+                '<a href="' + escapeHtml(href) + '">' +
+                  '<span class="num">' + d + '</span>' +
+                  img +
+                  meta +
+                '</a>' +
+                '</div>';
+            } else {
+              cells += '<div class="' + classes.join(' ') + '">' +
+                '<span class="num">' + d + '</span>' +
+                '</div>';
+            }
+          }
+
+          html += '<section class="archive-month">' +
+            '<h2 class="archive-month-name">' + escapeHtml(monthName) + '</h2>' +
+            '<div class="archive-weekdays">' +
+              WEEKDAYS.map(function (w) { return '<div>' + w + '</div>'; }).join('') +
+            '</div>' +
+            '<div class="archive-grid">' + cells + '</div>' +
+            '</section>';
+        });
+
+        root.innerHTML = html;
+      }
+
+      fetch('history.json', { cache: 'no-cache' })
+        .then(function (res) {
+          if (!res.ok) throw new Error('fetch failed: ' + res.status);
+          return res.json();
+        })
+        .then(render)
+        .catch(function () {
+          renderError();
+        });
+    })();
+  </script>
 </body>
 </html>
