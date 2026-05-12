@@ -1,0 +1,65 @@
+name: Smoke · Permissions
+
+# Minimal workflow that exercises the same git + PR + merge path as the
+# real Morning Dispatch run, without invoking Claude. Use this to verify
+# repo/account settings allow workflows to push, open PRs, and merge to
+# main — finishes in under 30 seconds, no API cost.
+#
+# Run from the Actions tab → Smoke · Permissions → Run workflow.
+
+on:
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: smoke-permissions
+  cancel-in-progress: false
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    env:
+      TZ: Australia/Sydney
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: true
+
+      - name: Configure git author
+        run: |
+          git config user.name "morning-dispatch-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      - name: Make a trivial change on a new branch
+        id: branch
+        run: |
+          set -euo pipefail
+          BRANCH="smoke/$(date +%Y-%m-%d-%H%M%S)"
+          git checkout -b "$BRANCH"
+          mkdir -p .smoke-test
+          echo "$(date -u +%Y-%m-%dT%H:%M:%SZ) run=${{ github.run_id }}" >> .smoke-test/runs.log
+          git add .smoke-test/runs.log
+          git commit -m "smoke: log run ${{ github.run_id }}"
+          echo "name=$BRANCH" >> "$GITHUB_OUTPUT"
+
+      - name: Push, open PR, merge
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          BRANCH="${{ steps.branch.outputs.name }}"
+          git remote set-url origin "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+          git push -u origin HEAD
+          gh pr create \
+            --base main \
+            --head "$BRANCH" \
+            --title "smoke: permissions verification" \
+            --body "Dummy run from .github/workflows/smoke-permissions.yml — verifies GHA can push to a branch, open a PR, and merge it to main. Safe to ignore; appends a timestamp to .smoke-test/runs.log."
+          gh pr merge "$BRANCH" \
+            --squash \
+            --delete-branch
