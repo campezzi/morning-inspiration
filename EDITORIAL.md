@@ -81,4 +81,4 @@ The note's tone should follow the mood's character — let it shape sentence rhy
 ## Notes to the generator
 Anything I want to flag, experiment with, or change. Free-form.
 
-- (empty for now)
+- For music entries tied to a specific album — even when featuring a single track from it — prefer the album cover art as the entry image. The cover is the work's visual identity. Fall back to a portrait, performance photo, or label/artist page only when the entry isn't anchored to a particular album.
