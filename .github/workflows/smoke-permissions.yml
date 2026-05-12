@@ -2,15 +2,19 @@ name: Smoke · Permissions
 
 # Minimal workflow that exercises the same git + PR + merge path as the
 # real Morning Dispatch run, without invoking Claude. Use this to verify
-# repo/account settings allow workflows to push, open PRs, and merge to
-# main — finishes in under 30 seconds, no API cost.
+# the runner can push, open PRs, and merge to main — finishes in under
+# 30 seconds, no API cost.
 #
-# Run from the Actions tab → Smoke · Permissions → Run workflow.
+# Authenticates via the WORKFLOW_PAT secret (fine-grained PAT scoped to
+# this repo with Contents + Pull requests write). The default GITHUB_TOKEN
+# could not create PRs even with all permissions granted; PAT sidesteps
+# whatever was gating it.
 
 on:
   workflow_dispatch: {}
 
-permissions: write-all  # smoke test only — grants everything to rule out a scope issue
+permissions:
+  contents: read
 
 concurrency:
   group: smoke-permissions
@@ -27,6 +31,7 @@ jobs:
         with:
           fetch-depth: 0
           persist-credentials: true
+          token: ${{ secrets.WORKFLOW_PAT }}
 
       - name: Configure git author
         run: |
@@ -45,35 +50,18 @@ jobs:
           git commit -m "smoke: log run ${{ github.run_id }}"
           echo "name=$BRANCH" >> "$GITHUB_OUTPUT"
 
-      - name: Inspect token identity
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          echo "--- gh auth status ---"
-          gh auth status || true
-          echo "--- whoami (as token) ---"
-          gh api user --jq '. | {login, type, id}' || true
-          echo "--- repo perms the token sees ---"
-          gh api "repos/${GITHUB_REPOSITORY}" --jq '.permissions' || true
-
       - name: Push, open PR, merge
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.WORKFLOW_PAT }}
         run: |
           set -euo pipefail
           BRANCH="${{ steps.branch.outputs.name }}"
-          git remote set-url origin "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
           git push -u origin HEAD
-          echo "--- trying REST API directly (clearer error than gh) ---"
-          gh api "repos/${GITHUB_REPOSITORY}/pulls" -X POST \
-            -f title="smoke: permissions verification" \
-            -f head="$BRANCH" \
-            -f base="main" \
-            -f body="Dummy run." \
-            && PR_OPENED=1 || PR_OPENED=0
-          if [ "$PR_OPENED" = "1" ]; then
-            gh pr merge "$BRANCH" --squash --delete-branch
-          else
-            echo "PR creation failed even with write-all; see error above."
-            exit 1
-          fi
+          gh pr create \
+            --base main \
+            --head "$BRANCH" \
+            --title "smoke: permissions verification" \
+            --body "Dummy run from .github/workflows/smoke-permissions.yml — verifies GHA can push, open a PR, and merge it to main."
+          gh pr merge "$BRANCH" \
+            --squash \
+            --delete-branch

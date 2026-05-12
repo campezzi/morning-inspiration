@@ -9,8 +9,7 @@ on:
   workflow_dispatch: {}
 
 permissions:
-  contents: write
-  pull-requests: write
+  contents: read
   id-token: write
 
 concurrency:
@@ -32,6 +31,7 @@ jobs:
         with:
           fetch-depth: 0
           persist-credentials: true
+          token: ${{ secrets.WORKFLOW_PAT }}
 
       - name: Configure git author
         run: |
@@ -56,7 +56,7 @@ jobs:
 
       - name: Commit, push, open PR, merge
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.WORKFLOW_PAT }}
         run: |
           set -euo pipefail
           BRANCH="${{ steps.branch.outputs.name }}"
@@ -70,8 +70,8 @@ jobs:
           MSG="add entry: ${TITLE} — ${CREATOR}"
           git commit -m "$MSG"
           # claude-code-action revokes its installation token at cleanup,
-          # which invalidates the credentials actions/checkout configured.
-          # Re-point origin at GITHUB_TOKEN before pushing.
+          # which clobbers the credentials actions/checkout configured.
+          # Re-point origin at the PAT before pushing.
           git remote set-url origin "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
           git push -u origin HEAD
           gh pr create \
