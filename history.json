@@ -53,5 +53,16 @@
     "source_name": "Wikipedia",
     "source_url": "https://en.wikipedia.org/wiki/From_Her_to_Eternity",
     "image_url": "https://upload.wikimedia.org/wikipedia/commons/8/8f/Nick_Cave_%282021%29.jpg"
+  },
+  {
+    "date": "2026-05-13",
+    "mood": "playful",
+    "format": "History",
+    "title": "The Great Emu War",
+    "creator": "Royal Australian Artillery",
+    "year": 1932,
+    "source_name": "Wikipedia",
+    "source_url": "https://en.wikipedia.org/wiki/Emu_War",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/b/be/Deceased_emu_during_Emu_War.jpg"
   }
 ]
