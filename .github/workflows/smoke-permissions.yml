@@ -10,9 +10,7 @@ name: Smoke · Permissions
 on:
   workflow_dispatch: {}
 
-permissions:
-  contents: write
-  pull-requests: write
+permissions: write-all  # smoke test only — grants everything to rule out a scope issue
 
 concurrency:
   group: smoke-permissions
@@ -47,6 +45,17 @@ jobs:
           git commit -m "smoke: log run ${{ github.run_id }}"
           echo "name=$BRANCH" >> "$GITHUB_OUTPUT"
 
+      - name: Inspect token identity
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          echo "--- gh auth status ---"
+          gh auth status || true
+          echo "--- whoami (as token) ---"
+          gh api user --jq '. | {login, type, id}' || true
+          echo "--- repo perms the token sees ---"
+          gh api "repos/${GITHUB_REPOSITORY}" --jq '.permissions' || true
+
       - name: Push, open PR, merge
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -55,11 +64,16 @@ jobs:
           BRANCH="${{ steps.branch.outputs.name }}"
           git remote set-url origin "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
           git push -u origin HEAD
-          gh pr create \
-            --base main \
-            --head "$BRANCH" \
-            --title "smoke: permissions verification" \
-            --body "Dummy run from .github/workflows/smoke-permissions.yml — verifies GHA can push to a branch, open a PR, and merge it to main. Safe to ignore; appends a timestamp to .smoke-test/runs.log."
-          gh pr merge "$BRANCH" \
-            --squash \
-            --delete-branch
+          echo "--- trying REST API directly (clearer error than gh) ---"
+          gh api "repos/${GITHUB_REPOSITORY}/pulls" -X POST \
+            -f title="smoke: permissions verification" \
+            -f head="$BRANCH" \
+            -f base="main" \
+            -f body="Dummy run." \
+            && PR_OPENED=1 || PR_OPENED=0
+          if [ "$PR_OPENED" = "1" ]; then
+            gh pr merge "$BRANCH" --squash --delete-branch
+          else
+            echo "PR creation failed even with write-all; see error above."
+            exit 1
+          fi
