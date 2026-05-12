@@ -127,15 +127,10 @@
             if (entry) {
               var href = (iso === TODAY) ? 'index.html' : 'archive/' + iso + '.html';
               var img = entry.image_url ? '<img src="' + escapeHtml(entry.image_url) + '" alt="">' : '';
-              var meta = '<div class="meta">' +
-                '<div class="t">' + escapeHtml(entry.title || '') + '</div>' +
-                '<div class="c">' + escapeHtml(entry.creator || '') + '</div>' +
-                '</div>';
               cells += '<div class="' + classes.join(' ') + '">' +
                 '<a href="' + escapeHtml(href) + '">' +
                   '<span class="num">' + d + '</span>' +
                   img +
-                  meta +
                 '</a>' +
                 '</div>';
             } else {

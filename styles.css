@@ -212,6 +212,10 @@ body {
 }
 
 /* Archive page — calendar layout */
+.dispatch.archive {
+  max-width: 52rem;
+}
+
 .archive-calendar {
   min-height: 4rem;
 }
@@ -311,39 +315,6 @@ body {
   transform: scale(1.05);
 }
 
-.archive-day .meta {
-  position: absolute;
-  inset: 0;
-  padding: 1rem 0.7rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  background: rgba(18, 16, 14, 0.86);
-  opacity: 0;
-  transition: opacity 0.25s;
-  font-family: var(--sans);
-  font-size: 0.62rem;
-  color: var(--text);
-  line-height: 1.3;
-}
-
-.archive-day.filled:hover .meta {
-  opacity: 1;
-}
-
-.archive-day .meta .t {
-  font-family: var(--serif);
-  font-style: italic;
-  font-size: 0.78rem;
-  line-height: 1.3;
-}
-
-.archive-day .meta .c {
-  color: var(--text);
-  opacity: 0.75;
-  margin-top: 0.15rem;
-}
-
 .archive-day.today {
   outline: 1px solid var(--text-muted);
   outline-offset: -1px;
@@ -358,9 +329,6 @@ body {
     font-size: 0.55rem;
     top: 0.25rem;
     left: 0.3rem;
-  }
-  .archive-day .meta {
-    display: none;
   }
 }
 
