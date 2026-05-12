@@ -50,6 +50,19 @@ jobs:
           git commit -m "smoke: log run ${{ github.run_id }}"
           echo "name=$BRANCH" >> "$GITHUB_OUTPUT"
 
+      - name: Verify PAT identity
+        env:
+          GH_TOKEN: ${{ secrets.WORKFLOW_PAT }}
+        run: |
+          echo "Token length: ${#GH_TOKEN}"
+          echo "Token prefix: ${GH_TOKEN:0:7}…  (github_pat_ = fine-grained, ghp_ = classic)"
+          echo "--- gh auth status ---"
+          gh auth status || true
+          echo "--- whoami (should print campezzi if PAT is healthy) ---"
+          gh api user --jq '{login, type, id}' || true
+          echo "--- can the PAT see the repo and its perms? ---"
+          gh api "repos/${GITHUB_REPOSITORY}" --jq '{full_name, private, fork, permissions, default_branch}' || true
+
       - name: Push, open PR, merge
         env:
           GH_TOKEN: ${{ secrets.WORKFLOW_PAT }}
@@ -57,11 +70,10 @@ jobs:
           set -euo pipefail
           BRANCH="${{ steps.branch.outputs.name }}"
           git push -u origin HEAD
-          gh pr create \
-            --base main \
-            --head "$BRANCH" \
-            --title "smoke: permissions verification" \
-            --body "Dummy run from .github/workflows/smoke-permissions.yml — verifies GHA can push, open a PR, and merge it to main."
-          gh pr merge "$BRANCH" \
-            --squash \
-            --delete-branch
+          echo "--- Trying REST POST /pulls (clearer error than gh pr create) ---"
+          gh api "repos/${GITHUB_REPOSITORY}/pulls" -X POST \
+            -f title="smoke: permissions verification" \
+            -f head="$BRANCH" \
+            -f base="main" \
+            -f body="Dummy run."
+          gh pr merge "$BRANCH" --squash --delete-branch
