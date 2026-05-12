@@ -4,17 +4,13 @@ name: Smoke · Permissions
 # real Morning Dispatch run, without invoking Claude. Use this to verify
 # the runner can push, open PRs, and merge to main — finishes in under
 # 30 seconds, no API cost.
-#
-# Authenticates via the WORKFLOW_PAT secret (fine-grained PAT scoped to
-# this repo with Contents + Pull requests write). The default GITHUB_TOKEN
-# could not create PRs even with all permissions granted; PAT sidesteps
-# whatever was gating it.
 
 on:
   workflow_dispatch: {}
 
 permissions:
-  contents: read
+  contents: write
+  pull-requests: write
 
 concurrency:
   group: smoke-permissions
@@ -31,7 +27,6 @@ jobs:
         with:
           fetch-depth: 0
           persist-credentials: true
-          token: ${{ secrets.WORKFLOW_PAT }}
 
       - name: Configure git author
         run: |
@@ -50,25 +45,9 @@ jobs:
           git commit -m "smoke: log run ${{ github.run_id }}"
           echo "name=$BRANCH" >> "$GITHUB_OUTPUT"
 
-      - name: Verify PAT identity
-        env:
-          GH_TOKEN: ${{ secrets.WORKFLOW_PAT }}
-        run: |
-          echo "Token length: ${#GH_TOKEN}"
-          echo "Token prefix: ${GH_TOKEN:0:7}…  (github_pat_ = fine-grained, ghp_ = classic)"
-          echo "--- gh auth status ---"
-          gh auth status || true
-          echo "--- whoami (should print campezzi if PAT is healthy) ---"
-          gh api user --jq '{login, type, id}' || true
-          echo "--- can the PAT see the repo and its perms? ---"
-          gh api "repos/${GITHUB_REPOSITORY}" --jq '{full_name, private, fork, permissions, default_branch}' || true
-          echo "--- actual OAuth scopes on this token (classic PAT only) ---"
-          curl -sI -H "Authorization: token ${GH_TOKEN}" https://api.github.com/user \
-            | grep -iE '^x-(oauth|accepted-oauth)-scopes:' || echo "(no oauth-scopes header — likely a fine-grained PAT)"
-
       - name: Push, open PR, merge
         env:
-          GH_TOKEN: ${{ secrets.WORKFLOW_PAT }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           set -euo pipefail
           BRANCH="${{ steps.branch.outputs.name }}"
