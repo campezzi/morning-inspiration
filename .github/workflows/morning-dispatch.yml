@@ -41,7 +41,7 @@ jobs:
       - name: Create dispatch branch
         id: branch
         run: |
-          BRANCH="dispatch/$(date -u +%Y-%m-%d)-${{ github.run_number }}"
+          BRANCH="dispatch/$(date +%Y-%m-%d)-${{ github.run_number }}"
           git checkout -b "$BRANCH"
           echo "name=$BRANCH" >> "$GITHUB_OUTPUT"
 
@@ -69,6 +69,10 @@ jobs:
           CREATOR=$(jq -r '.[-1].creator' history.json)
           MSG="add entry: ${TITLE} — ${CREATOR}"
           git commit -m "$MSG"
+          # claude-code-action revokes its installation token at cleanup,
+          # which invalidates the credentials actions/checkout configured.
+          # Re-point origin at GITHUB_TOKEN before pushing.
+          git remote set-url origin "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
           git push -u origin HEAD
           gh pr create \
             --base main \
