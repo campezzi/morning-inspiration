@@ -62,6 +62,9 @@ jobs:
           gh api user --jq '{login, type, id}' || true
           echo "--- can the PAT see the repo and its perms? ---"
           gh api "repos/${GITHUB_REPOSITORY}" --jq '{full_name, private, fork, permissions, default_branch}' || true
+          echo "--- actual OAuth scopes on this token (classic PAT only) ---"
+          curl -sI -H "Authorization: token ${GH_TOKEN}" https://api.github.com/user \
+            | grep -iE '^x-(oauth|accepted-oauth)-scopes:' || echo "(no oauth-scopes header — likely a fine-grained PAT)"
 
       - name: Push, open PR, merge
         env:
