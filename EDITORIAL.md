@@ -13,11 +13,17 @@ Mix in contemporary and living artists alongside the classics. I want to stay co
 - Music: DJ Shadow, The White Stripes, Angine de Poitrine, Portishead, Massive Attack, Tom Waits, Nick Cave, Boards of Canada, Jeff Buckley, Kraftwerk, jazz, blues
 - Writing: Edgar Allan Poe, Borges, Calvino, Carver, Sebald, Didion, McCarthy, Murakami, Bukowski, Kafka, artist interviews
 - Motorsport: Senna, F1 history, endurance racing, famous laps and decisive moments
+- Cars: design icons (Jaguar E-Type, Lamborghini Miura, Ferrari 250 GTO, Porsche 911), classic Alfas, Le Mans-era endurance cars, weird concept cars, modern hypercars — the cars as objects of beauty, separate from racing context
 - Painting: Hopper, Hammershøi, Goya, Bacon, Rothko, Agnes Martin, Van Gogh, Warhol, Banksy, Basquiat, Japanese woodblock, religious iconography
 - Surreal: Magritte, de Chirico, Buñuel, Švankmajer, outsider art, liminal spaces
+- Imagined worlds: Codex Seraphinianus (Luigi Serafini), the Voynich Manuscript, Una Woodruff's imaginary botanies, Wayne Barlowe's expedition art, Boris Artzybasheff's anthropomorphic machines, Piranesi's Carceri, fictional encyclopedias, invented taxonomies, visionary outsider illustration
 - Sculpture/installation: Richard Serra, James Turrell, Anish Kapoor, Walter De Maria, land art
 - Design: Dieter Rams, Bruno Munari, Japanese industrial design, vintage race posters
 - Retro sci-fi: pulp cover art, Moebius, Syd Mead, Chris Foss, Soviet space posters, vintage futurism
+- Space: NASA/ESA imagery, Hubble and JWST, Apollo and Voyager photos, spacecraft (Saturn V, Soyuz, Falcon, ISS), astronaut portraits (Armstrong, Gagarin, contemporary crews), planetary surfaces, telescope arrays
+- History tidbits: fun, weird, and forgotten moments — the Dancing Plague, the Great Emu War, medieval marginalia, strange Olympic events, odd duels and inventions. The curio side of history, not the journalistic side.
+- Aviation: Concorde, SR-71 Blackbird, golden-age airline posters, hangar shots, vintage props, jet-age glamour, the aircraft as object (lineage with cars and space)
+- Cartography: old hand-drawn maps, sea charts with monsters, celestial atlases, transit diagrams, Tufte-style infographics, beautiful pre-GPS geography
 - Video games: pixel art, early arcade cabinet art, box art from the 8-bit and 16-bit eras, demoscene
 - Comics: Moebius, Katsuhiro Otomo, Enki Bilal, Jack Kirby, European bande dessinée, underground comix
 - Comedy: Mel Brooks, Larry David, Jerry Seinfeld, Louis CK, stand-up specials, comedic writing
@@ -43,7 +49,7 @@ If anything here fits the next slot, prioritize it.
 - Match the register to the work and the mood — a Mel Brooks routine doesn't deserve the same tone as a Hammershøi interior. Don't force a tidy ending.
 
 ## Format rotation
-Pick randomly from: photograph, architecture, film, music, passage, motorsport, painting, surreal, sculpture/installation, design, retro sci-fi, video game, comic, comedy, street photography, portrait. No format repeats within a 3-day window (if painting runs Monday, it can't reappear until Thursday). Don't repeat the same creator within ~30 days.
+Pick randomly from: photograph, architecture, film, music, passage, motorsport, painting, surreal, sculpture/installation, design, retro sci-fi, video game, comic, comedy, street photography, portrait, cars, space, history, aviation, cartography, imagined worlds. No format repeats within a 3-day window (if painting runs Monday, it can't reappear until Thursday). Don't repeat the same creator within ~30 days.
 
 ## Mood rotation
 Each entry is written in one of these moods, picked at random with the constraint that no mood repeats within a 4-day window. Mood is chosen *first*, then format follows with a loose bias (see "Mood → format leans" below). Mood is internal — never displayed on the page.
@@ -59,13 +65,13 @@ Each entry is written in one of these moods, picked at random with the constrain
 ### Mood → format leans
 Biases for picking the format after the mood is chosen — never restrictive. Surprise pairings (e.g. *playful* + architecture, *contemplative* + comedy) are welcome when the work earns it.
 
-- **contemplative** → painting, photography, architecture, passage
-- **playful** → comedy, video game, design, comic, retro sci-fi
-- **wry** → comedy, passage, street photography, painting
-- **bold** → painting, sculpture/installation, motorsport, music, passage
-- **restless** → music, street photography, film, motorsport
-- **melancholic** → photograph, film, music, painting, passage
-- **uncanny** → surreal, film, painting, comic, retro sci-fi
+- **contemplative** → painting, photography, architecture, passage, space, aviation, cartography, imagined worlds
+- **playful** → comedy, video game, design, comic, retro sci-fi, history, cars, cartography, imagined worlds
+- **wry** → comedy, passage, street photography, painting, history, cartography
+- **bold** → painting, sculpture/installation, motorsport, music, passage, cars, space, aviation
+- **restless** → music, street photography, film, motorsport, cars, aviation
+- **melancholic** → photograph, film, music, painting, passage, space, aviation
+- **uncanny** → surreal, film, painting, comic, retro sci-fi, space, history, cartography, imagined worlds
 
 ### Mood → prose register
 The note's tone should follow the mood's character — let it shape sentence rhythm, what details you notice, and how openly warmth or weight enters the prose. Don't slap the mood on as a label.
