@@ -42,5 +42,16 @@
     "source_name": "Wikipedia",
     "source_url": "https://en.wikipedia.org/wiki/Mystery_and_Melancholy_of_a_Street",
     "image_url": "https://uploads6.wikiart.org/images/giorgio-de-chirico/mystery-and-melancholy-of-a-street-1914.jpg"
+  },
+  {
+    "date": "2026-05-12",
+    "mood": "restless",
+    "format": "Music",
+    "title": "From Her to Eternity",
+    "creator": "Nick Cave & The Bad Seeds",
+    "year": 1984,
+    "source_name": "Wikipedia",
+    "source_url": "https://en.wikipedia.org/wiki/From_Her_to_Eternity",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/8/8f/Nick_Cave_%282021%29.jpg"
   }
 ]
