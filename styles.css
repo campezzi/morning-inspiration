@@ -313,9 +313,12 @@ body {
 
 .archive-day .meta {
   position: absolute;
-  inset: auto 0 0 0;
-  padding: 0.5rem 0.55rem 0.55rem;
-  background: linear-gradient(to top, rgba(28, 26, 23, 0.92), rgba(28, 26, 23, 0));
+  inset: 0;
+  padding: 1rem 0.7rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background: rgba(18, 16, 14, 0.86);
   opacity: 0;
   transition: opacity 0.25s;
   font-family: var(--sans);
@@ -331,12 +334,14 @@ body {
 .archive-day .meta .t {
   font-family: var(--serif);
   font-style: italic;
-  font-size: 0.72rem;
+  font-size: 0.78rem;
+  line-height: 1.3;
 }
 
 .archive-day .meta .c {
-  color: var(--text-muted);
-  margin-top: 0.1rem;
+  color: var(--text);
+  opacity: 0.75;
+  margin-top: 0.15rem;
 }
 
 .archive-day.today {
