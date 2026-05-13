@@ -64,5 +64,16 @@
     "source_name": "Wikipedia",
     "source_url": "https://en.wikipedia.org/wiki/Emu_War",
     "image_url": "https://upload.wikimedia.org/wikipedia/commons/b/be/Deceased_emu_during_Emu_War.jpg"
+  },
+  {
+    "date": "2026-05-14",
+    "mood": "contemplative",
+    "format": "Cartography",
+    "title": "Carta Marina",
+    "creator": "Olaus Magnus",
+    "year": 1539,
+    "source_name": "Wikipedia",
+    "source_url": "https://en.wikipedia.org/wiki/Carta_marina",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Carta_Marina.jpeg/1280px-Carta_Marina.jpeg"
   }
 ]
