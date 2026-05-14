@@ -74,7 +74,7 @@ Choose a specific, real work in the selected format that fits the mood. Prioriti
 - **Sourcing images:** Hotlink directly — reference the external URL in `<img src>` rather than committing image binaries to the repo. Browsers load these client-side, so hotlinking works fine. Prefer freely-licensed sources where possible. Good sources: Wikimedia Commons (`https://upload.wikimedia.org/wikipedia/commons/...`), Met Open Access (`https://images.metmuseum.org/...`), Art Institute of Chicago IIIF (`https://www.artic.edu/iiif/2/{uuid}/full/843,/0/default.jpg`), Internet Archive, Rijksmuseum Open Access, official artist/label/publisher pages. Wikipedia article images are almost always Wikimedia-hosted and safe to hotlink.
 - **Music/video:** Never embed or download the work itself. Pair a contextual image (album cover, performance photo, artist portrait) with a link to a canonical source (artist site, label page, Bandcamp, Internet Archive).
 - **Passages:** Include full text only for public-domain works. For copyrighted works, excerpt 1–2 sentences and link to the full text. Pair the passage with a contextual image — book cover, author portrait, period illustration, manuscript page.
-- **Image quality matters.** Choose images that are sharp, well-framed, and large enough to render at the layout's `max-height: 75vh`. Avoid thumbnails, watermarked stock, and low-res scans when a better version exists. The image carries the page visually — don't settle for a placeholder.
+- **Image quality matters.** The image is rendered wide (the page container is up to 1200px) and tall (`max-height: 80vh`). Choose images that are sharp, well-framed, and high-resolution enough to hold up at that size. Avoid thumbnails, watermarked stock, and low-res scans when a better version exists. The image carries the page visually — don't settle for a placeholder.
 
 ## Step 8 — Write the note
 
@@ -90,15 +90,15 @@ Follow the editorial voice rules from `EDITORIAL.md`. Default rules unless overr
 
 ## Step 9 — Generate index.html
 
-Use `template.html` as the structural reference. Fill in:
-- `{{FORMAT}}` — format label in title case (e.g. `Photograph`, `Music`, `Painting`) — the CSS renders it uppercase automatically
+Use `template.html` as the structural reference. The page is a single column: a thin masthead at the top, a large centered italic headline with the title and creator, the image (wide, breathing room around it), the note in a narrower reading column, then the footer. Fill in:
+- `{{FORMAT}}` — format label in title case (e.g. `Photograph`, `Music`, `Painting`). The masthead prepends "Morning Inspiration · " and the CSS renders the whole line uppercase.
 - `{{MEDIA_BLOCK}}` — the appropriate media markup (see patterns below)
-- `{{TITLE}}` — work title
-- `{{CREATOR}}` — creator name
+- `{{TITLE}}` — work title — renders as the large centered italic headline near the top
+- `{{CREATOR}}` — creator name — renders directly below the title with `— {{YEAR}}` appended (use an em dash, not a comma)
 - `{{YEAR}}` — year of creation
 - `{{NOTE}}` — the note, wrapped in `<p>` tags
 - `{{SOURCE}}` — attribution line with link
-- `{{DATE}}` — today's date, formatted like "9 May 2026"
+- `{{DATE}}` — today's date, formatted like "9 May 2026". The template uses this in two places (masthead at top-right and footer date line) — substitute both with the same string.
 - `{{YESTERDAY_LINK}}` — `<a class="yesterday-link" href="archive/YYYY-MM-DD.html">yesterday</a>` pointing to the file just archived (relative path, since the fresh `index.html` lives at the repo root)
 
 The template already includes the archive link next to `{{YESTERDAY_LINK}}` — leave it alone. The mood is **not** rendered anywhere in the HTML.

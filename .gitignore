@@ -1,0 +1,8 @@
+# Claude Code local-only state — keep .claude/ itself trackable so shared
+# project config (settings.json, skills, agents, commands) can be committed.
+.claude/worktrees/
+.claude/settings.local.json
+
+# OS junk
+Thumbs.db
+.DS_Store
