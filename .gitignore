@@ -1,0 +1,6 @@
+# Claude Code local state (worktrees, sessions, local settings)
+.claude/
+
+# OS junk
+Thumbs.db
+.DS_Store
