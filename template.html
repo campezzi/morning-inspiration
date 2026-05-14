@@ -9,14 +9,19 @@
 <body>
   <main class="dispatch">
 
-    <div class="format-label">{{FORMAT}}</div>
+    <div class="masthead">
+      <div class="masthead-left">
+        Morning Inspiration <span class="accent">·</span> {{FORMAT}}
+      </div>
+      <div class="masthead-right">{{DATE}}</div>
+    </div>
+
+    <div class="headline">
+      <div class="headline-title">{{TITLE}}</div>
+      <div class="headline-creator">{{CREATOR}} — {{YEAR}}</div>
+    </div>
 
     {{MEDIA_BLOCK}}
-
-    <div class="work-info">
-      <div class="work-title">{{TITLE}}</div>
-      <div class="work-creator">{{CREATOR}}, {{YEAR}}</div>
-    </div>
 
     <div class="note">
       {{NOTE}}

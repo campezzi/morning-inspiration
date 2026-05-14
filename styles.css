@@ -16,6 +16,7 @@
   --text-muted: #8a8478;
   --text-faint: #6b6560;
   --rule: #33302b;
+  --accent: #c9b88a;
   --serif: 'Source Serif 4', 'Georgia', serif;
   --sans: 'Inter', 'Helvetica Neue', 'Arial', sans-serif;
   --measure: 38rem;
@@ -34,9 +35,7 @@ body {
   background-color: var(--bg);
   line-height: 1.7;
   min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  padding: 6rem 1.5rem 4rem;
+  padding: 2.5rem 2rem 4rem;
   animation: fade-in 0.8s ease-out;
 }
 
@@ -46,11 +45,66 @@ body {
 }
 
 .dispatch {
-  width: 100%;
-  max-width: var(--measure);
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-/* Format label */
+/* Masthead — thin top bar with site name + format and date */
+.masthead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--rule);
+  margin-bottom: 2.5rem;
+}
+
+.masthead-left {
+  font-family: var(--sans);
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.masthead-left .accent { color: var(--accent); }
+
+.masthead-right {
+  font-family: var(--sans);
+  font-size: 0.65rem;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  color: var(--text-faint);
+}
+
+/* Headline — centered italic title + creator */
+.headline {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.headline-title {
+  font-family: var(--serif);
+  font-size: 3rem;
+  font-weight: 400;
+  font-style: italic;
+  line-height: 1.05;
+  color: #ece7dc;
+  margin-bottom: 0.6rem;
+  letter-spacing: -0.01em;
+}
+
+.headline-creator {
+  font-family: var(--sans);
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: var(--text-muted);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+/* Format label — used by the archive page header */
 .format-label {
   font-family: var(--sans);
   font-size: 0.65rem;
@@ -61,19 +115,23 @@ body {
   margin-bottom: 2.5rem;
 }
 
-/* Media */
+/* Media — wide centered image */
 .media {
-  margin-bottom: 2rem;
+  text-align: center;
+  margin-bottom: 3rem;
 }
 
 .media img {
   display: block;
   max-width: 100%;
-  height: auto;
-  max-height: 75vh;
+  max-height: 80vh;
+  margin: 0 auto;
+  object-fit: contain;
 }
 
 .media .external-link {
+  display: inline-block;
+  margin-top: 1rem;
   font-family: var(--sans);
   font-size: 0.8rem;
   font-weight: 400;
@@ -84,45 +142,18 @@ body {
   transition: color 0.2s, border-color 0.2s;
 }
 
-.media img + .external-link {
-  display: inline-block;
-  margin-top: 1rem;
-}
-
 .media .external-link:hover {
   color: var(--text);
   border-color: var(--text-muted);
 }
 
-/* Work info */
-.work-info {
-  margin-bottom: 2rem;
-}
-
-.work-title {
-  font-family: var(--serif);
-  font-size: 1.15rem;
-  font-weight: 400;
-  font-style: italic;
-  line-height: 1.4;
-  margin-bottom: 0.25rem;
-}
-
-.work-creator {
-  font-family: var(--sans);
-  font-size: 0.8rem;
-  font-weight: 400;
-  color: var(--text-muted);
-  letter-spacing: 0.01em;
-}
-
-/* Note */
+/* Note — narrower reading column, centered */
 .note {
-  font-size: 1rem;
+  max-width: var(--measure);
+  margin: 0 auto 3rem;
+  font-size: 1.02rem;
   font-weight: 300;
-  line-height: 1.75;
-  margin-bottom: 3rem;
-  max-width: 34rem;
+  line-height: 1.85;
 }
 
 .note p + p {
@@ -131,7 +162,8 @@ body {
 
 /* Passage (for text-based entries) */
 .passage {
-  margin-bottom: 2rem;
+  max-width: var(--measure);
+  margin: 0 auto 3rem;
   padding-left: 1.25rem;
   border-left: 2px solid var(--rule);
 }
@@ -155,7 +187,9 @@ body {
 
 /* Footer */
 .dispatch-footer {
-  padding-top: 2rem;
+  max-width: var(--measure);
+  margin: 0 auto;
+  padding-top: 1.75rem;
   border-top: 1px solid var(--rule);
 }
 
@@ -320,7 +354,38 @@ body {
   outline-offset: -1px;
 }
 
+/* Responsive */
+@media (max-width: 700px) {
+  body { padding: 2rem 1.25rem 3rem; }
+
+  .masthead {
+    margin-bottom: 1.75rem;
+  }
+
+  .headline {
+    margin-bottom: 2rem;
+  }
+
+  .headline-title {
+    font-size: 2rem;
+  }
+
+  .media {
+    margin-bottom: 2rem;
+  }
+
+  .media img {
+    max-height: 70vh;
+  }
+
+  .note {
+    margin-bottom: 2.5rem;
+  }
+}
+
 @media (max-width: 600px) {
+  html { font-size: 16px; }
+
   .archive-grid,
   .archive-weekdays {
     gap: 0.25rem;
@@ -329,28 +394,5 @@ body {
     font-size: 0.55rem;
     top: 0.25rem;
     left: 0.3rem;
-  }
-}
-
-/* Responsive */
-@media (max-width: 600px) {
-  html {
-    font-size: 16px;
-  }
-
-  body {
-    padding: 3.5rem 1.25rem 3rem;
-  }
-
-  .format-label {
-    margin-bottom: 1.75rem;
-  }
-
-  .media img {
-    max-height: 60vh;
-  }
-
-  .note {
-    margin-bottom: 2.5rem;
   }
 }
