@@ -86,5 +86,16 @@
     "source_name": "Wikipedia",
     "source_url": "https://en.wikipedia.org/wiki/American_Gothic",
     "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Grant_Wood_-_American_Gothic_-_Google_Art_Project.jpg/1280px-Grant_Wood_-_American_Gothic_-_Google_Art_Project.jpg"
+  },
+  {
+    "date": "2026-05-16",
+    "mood": "uncanny",
+    "format": "Imagined Worlds",
+    "title": "Voynich Manuscript",
+    "creator": "Unknown",
+    "year": 1420,
+    "source_name": "Wikipedia",
+    "source_url": "https://en.wikipedia.org/wiki/Voynich_manuscript",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Voynich_Manuscript_%2832%29.jpg/1280px-Voynich_Manuscript_%2832%29.jpg"
   }
 ]
