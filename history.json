@@ -97,5 +97,16 @@
     "source_name": "Wikipedia",
     "source_url": "https://en.wikipedia.org/wiki/Voynich_manuscript",
     "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Voynich_Manuscript_%2832%29.jpg/1280px-Voynich_Manuscript_%2832%29.jpg"
+  },
+  {
+    "date": "2026-05-17",
+    "mood": "melancholic",
+    "format": "Passage",
+    "title": "The Student",
+    "creator": "Anton Chekhov",
+    "year": 1894,
+    "source_name": "Wikisource",
+    "source_url": "https://en.wikisource.org/wiki/The_Student",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/3/38/Anton_Chekhov_1897_in_Melihovo.jpg"
   }
 ]
