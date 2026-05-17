@@ -108,5 +108,16 @@
     "source_name": "Wikisource",
     "source_url": "https://en.wikisource.org/wiki/The_Student",
     "image_url": "https://upload.wikimedia.org/wikipedia/commons/3/38/Anton_Chekhov_1897_in_Melihovo.jpg"
+  },
+  {
+    "date": "2026-05-18",
+    "mood": "bold",
+    "format": "Cars",
+    "title": "Ferrari 250 GTO",
+    "creator": "Ferrari",
+    "year": 1962,
+    "source_name": "Wikipedia",
+    "source_url": "https://en.wikipedia.org/wiki/Ferrari_250_GTO",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/2/21/250GTO01.jpg"
   }
 ]
