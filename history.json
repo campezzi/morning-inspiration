@@ -119,5 +119,16 @@
     "source_name": "Wikipedia",
     "source_url": "https://en.wikipedia.org/wiki/Ferrari_250_GTO",
     "image_url": "https://upload.wikimedia.org/wikipedia/commons/2/21/250GTO01.jpg"
+  },
+  {
+    "date": "2026-05-19",
+    "mood": "restless",
+    "format": "Music",
+    "title": "Giant Steps",
+    "creator": "John Coltrane",
+    "year": 1960,
+    "source_name": "Wikipedia",
+    "source_url": "https://en.wikipedia.org/wiki/Giant_Steps_(album)",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/6/66/John_Coltrane_1963.jpg"
   }
 ]
