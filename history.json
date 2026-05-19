@@ -130,5 +130,16 @@
     "source_name": "Wikipedia",
     "source_url": "https://en.wikipedia.org/wiki/Giant_Steps_(album)",
     "image_url": "https://upload.wikimedia.org/wikipedia/commons/6/66/John_Coltrane_1963.jpg"
+  },
+  {
+    "date": "2026-05-20",
+    "mood": "contemplative",
+    "format": "Space",
+    "title": "Earthrise",
+    "creator": "William Anders",
+    "year": 1968,
+    "source_name": "Wikipedia",
+    "source_url": "https://en.wikipedia.org/wiki/Earthrise",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/NASA-Apollo8-Dec24-Earthrise.jpg/1280px-NASA-Apollo8-Dec24-Earthrise.jpg"
   }
 ]
