@@ -141,5 +141,16 @@
     "source_name": "Wikipedia",
     "source_url": "https://en.wikipedia.org/wiki/Earthrise",
     "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/NASA-Apollo8-Dec24-Earthrise.jpg/1280px-NASA-Apollo8-Dec24-Earthrise.jpg"
+  },
+  {
+    "date": "2026-05-21",
+    "mood": "playful",
+    "format": "Comic",
+    "title": "Little Nemo in Slumberland",
+    "creator": "Winsor McCay",
+    "year": 1905,
+    "source_name": "Wikipedia",
+    "source_url": "https://en.wikipedia.org/wiki/Little_Nemo",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/d/df/Little_Nemo_1907-09-29.jpg"
   }
 ]
