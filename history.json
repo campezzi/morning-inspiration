@@ -152,5 +152,16 @@
     "source_name": "Wikipedia",
     "source_url": "https://en.wikipedia.org/wiki/Un_Chien_Andalou",
     "image_url": "https://upload.wikimedia.org/wikipedia/en/thumb/1/1a/Screenshot_from_Un_Chien_Andalou.jpg/1280px-Screenshot_from_Un_Chien_Andalou.jpg"
+  },
+  {
+    "date": "2026-05-22",
+    "mood": "wry",
+    "format": "Painting",
+    "title": "Gas",
+    "creator": "Edward Hopper",
+    "year": 1940,
+    "source_name": "Wikipedia",
+    "source_url": "https://en.wikipedia.org/wiki/Gas_(painting)",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Hopper-Gas-1940.png/1280px-Hopper-Gas-1940.png"
   }
 ]
