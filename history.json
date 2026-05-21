@@ -141,5 +141,16 @@
     "source_name": "Wikipedia",
     "source_url": "https://en.wikipedia.org/wiki/Earthrise",
     "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/NASA-Apollo8-Dec24-Earthrise.jpg/1280px-NASA-Apollo8-Dec24-Earthrise.jpg"
+  },
+  {
+    "date": "2026-05-21",
+    "mood": "uncanny",
+    "format": "Film",
+    "title": "Un Chien Andalou",
+    "creator": "Luis Buñuel & Salvador Dalí",
+    "year": 1929,
+    "source_name": "Wikipedia",
+    "source_url": "https://en.wikipedia.org/wiki/Un_Chien_Andalou",
+    "image_url": "https://upload.wikimedia.org/wikipedia/en/thumb/1/1a/Screenshot_from_Un_Chien_Andalou.jpg/1280px-Screenshot_from_Un_Chien_Andalou.jpg"
   }
 ]
