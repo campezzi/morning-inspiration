@@ -163,5 +163,16 @@
     "source_name": "Wikipedia",
     "source_url": "https://en.wikipedia.org/wiki/Gas_(painting)",
     "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Hopper-Gas-1940.png/1280px-Hopper-Gas-1940.png"
+  },
+  {
+    "date": "2026-05-23",
+    "mood": "playful",
+    "format": "Comic",
+    "title": "Little Nemo in Slumberland",
+    "creator": "Winsor McCay",
+    "year": 1905,
+    "source_name": "Wikipedia",
+    "source_url": "https://en.wikipedia.org/wiki/Little_Nemo_in_Slumberland",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/8/8f/Little_Nemo_giant_girl.jpg"
   }
 ]
