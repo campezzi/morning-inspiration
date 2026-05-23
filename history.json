@@ -174,5 +174,16 @@
     "source_name": "Wikipedia",
     "source_url": "https://en.wikipedia.org/wiki/Little_Nemo_in_Slumberland",
     "image_url": "https://upload.wikimedia.org/wikipedia/commons/8/8f/Little_Nemo_giant_girl.jpg"
+  },
+  {
+    "date": "2026-05-24",
+    "mood": "melancholic",
+    "format": "Music",
+    "title": "Grace",
+    "creator": "Jeff Buckley",
+    "year": 1994,
+    "source_name": "Wikipedia",
+    "source_url": "https://en.wikipedia.org/wiki/Grace_(Jeff_Buckley_album)",
+    "image_url": "https://upload.wikimedia.org/wikipedia/en/e/e4/Jeff_Buckley_grace.jpg"
   }
 ]
