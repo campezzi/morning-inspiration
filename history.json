@@ -218,5 +218,16 @@
     "source_name": "Wikipedia",
     "source_url": "https://en.wikipedia.org/wiki/Church_of_the_Light",
     "image_url": "https://upload.wikimedia.org/wikipedia/commons/4/4b/Ibaraki_Kasugaoka_Church_light_cross.jpg"
+  },
+  {
+    "date": "2026-05-28",
+    "mood": "restless",
+    "format": "Music",
+    "title": "Blue Lines",
+    "creator": "Massive Attack",
+    "year": 1991,
+    "source_name": "Wikipedia",
+    "source_url": "https://en.wikipedia.org/wiki/Blue_Lines",
+    "image_url": "https://upload.wikimedia.org/wikipedia/en/a/a7/MassiveAttackBlueLines.jpg"
   }
 ]
