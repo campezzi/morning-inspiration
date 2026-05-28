@@ -229,5 +229,16 @@
     "source_name": "Wikipedia",
     "source_url": "https://en.wikipedia.org/wiki/Blue_Lines",
     "image_url": "https://upload.wikimedia.org/wikipedia/en/a/a7/MassiveAttackBlueLines.jpg"
+  },
+  {
+    "date": "2026-05-29",
+    "mood": "wry",
+    "format": "History",
+    "title": "The Dancing Plague of 1518",
+    "creator": "Frau Troffea",
+    "year": 1518,
+    "source_name": "Wikipedia",
+    "source_url": "https://en.wikipedia.org/wiki/Dancing_plague_of_1518",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/9/91/Danse_Saint_Guy_1518_Charles_Spindler.jpg"
   }
 ]
