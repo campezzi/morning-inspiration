@@ -240,5 +240,16 @@
     "source_name": "Wikipedia",
     "source_url": "https://en.wikipedia.org/wiki/Dancing_plague_of_1518",
     "image_url": "https://upload.wikimedia.org/wikipedia/commons/9/91/Danse_Saint_Guy_1518_Charles_Spindler.jpg"
+  },
+  {
+    "date": "2026-05-30",
+    "mood": "bold",
+    "format": "Painting",
+    "title": "The Raft of the Medusa",
+    "creator": "Théodore Géricault",
+    "year": 1819,
+    "source_name": "Wikipedia",
+    "source_url": "https://en.wikipedia.org/wiki/The_Raft_of_the_Medusa",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/JEAN_LOUIS_TH%C3%89ODORE_G%C3%89RICAULT_-_La_Balsa_de_la_Medusa_%28Museo_del_Louvre%2C_1818-19%29.jpg/1280px-JEAN_LOUIS_TH%C3%89ODORE_G%C3%89RICAULT_-_La_Balsa_de_la_Medusa_%28Museo_del_Louvre%2C_1818-19%29.jpg"
   }
 ]
