@@ -262,5 +262,16 @@
     "source_name": "Wikipedia",
     "source_url": "https://en.wikipedia.org/wiki/Concorde",
     "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Concorde_1977.jpg/1280px-Concorde_1977.jpg"
+  },
+  {
+    "date": "2026-06-01",
+    "mood": "playful",
+    "format": "Design",
+    "title": "Olivetti Valentine",
+    "creator": "Ettore Sottsass",
+    "year": 1969,
+    "source_name": "Wikipedia",
+    "source_url": "https://en.wikipedia.org/wiki/Olivetti_Valentine",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Olivetti-Valentine.jpg/1280px-Olivetti-Valentine.jpg"
   }
 ]
