@@ -273,5 +273,16 @@
     "source_name": "Wikipedia",
     "source_url": "https://en.wikipedia.org/wiki/Olivetti_Valentine",
     "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Olivetti-Valentine.jpg/1280px-Olivetti-Valentine.jpg"
+  },
+  {
+    "date": "2026-06-02",
+    "mood": "uncanny",
+    "format": "Imagined Worlds",
+    "title": "Carceri d'Invenzione",
+    "creator": "Giovanni Battista Piranesi",
+    "year": 1750,
+    "source_name": "Wikipedia",
+    "source_url": "https://en.wikipedia.org/wiki/Carceri_d%27invenzione",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/f/fc/Giovanni_Battista_Piranesi_-_The_Drawbridge%2C_plate_VII_from_the_series_Carceri_d%27Invenzione_-_Google_Art_Project.jpg"
   }
 ]
