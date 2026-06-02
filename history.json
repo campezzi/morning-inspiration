@@ -284,5 +284,16 @@
     "source_name": "Wikipedia",
     "source_url": "https://en.wikipedia.org/wiki/Carceri_d%27invenzione",
     "image_url": "https://upload.wikimedia.org/wikipedia/commons/f/fc/Giovanni_Battista_Piranesi_-_The_Drawbridge%2C_plate_VII_from_the_series_Carceri_d%27Invenzione_-_Google_Art_Project.jpg"
+  },
+  {
+    "date": "2026-06-03",
+    "mood": "contemplative",
+    "format": "Cartography",
+    "title": "Scenographia Systematis Copernicani",
+    "creator": "Andreas Cellarius",
+    "year": 1660,
+    "source_name": "Wikipedia",
+    "source_url": "https://en.wikipedia.org/wiki/Harmonia_Macrocosmica",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Cellarius_Harmonia_Macrocosmica_-_Scenographia_Systematis_Copernicani.jpg/1280px-Cellarius_Harmonia_Macrocosmica_-_Scenographia_Systematis_Copernicani.jpg"
   }
 ]
