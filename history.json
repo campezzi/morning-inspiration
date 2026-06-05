@@ -317,5 +317,16 @@
     "source_name": "Wikipedia",
     "source_url": "https://en.wikipedia.org/wiki/The_Steerage",
     "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Alfred_Stieglitz_-_The_Steerage_-_Google_Art_Project.jpg/1280px-Alfred_Stieglitz_-_The_Steerage_-_Google_Art_Project.jpg"
+  },
+  {
+    "date": "2026-06-06",
+    "mood": "bold",
+    "format": "Aviation",
+    "title": "SR-71 Blackbird",
+    "creator": "Lockheed Skunk Works",
+    "year": 1964,
+    "source_name": "Wikipedia",
+    "source_url": "https://en.wikipedia.org/wiki/Lockheed_SR-71_Blackbird",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/a/ae/SR-71A_in_flight_near_Beale_AFB_1988.JPEG"
   }
 ]
