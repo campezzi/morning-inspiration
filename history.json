@@ -328,5 +328,16 @@
     "source_name": "Wikipedia",
     "source_url": "https://en.wikipedia.org/wiki/Lockheed_SR-71_Blackbird",
     "image_url": "https://upload.wikimedia.org/wikipedia/commons/a/ae/SR-71A_in_flight_near_Beale_AFB_1988.JPEG"
+  },
+  {
+    "date": "2026-06-07",
+    "mood": "restless",
+    "format": "Film",
+    "title": "Shadows",
+    "creator": "John Cassavetes",
+    "year": 1959,
+    "source_name": "Wikipedia",
+    "source_url": "https://en.wikipedia.org/wiki/Shadows_(film)",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/5/57/John_Cassavetes%27_Shadows_-_Now_at_Embassy_Theater_Broadway.jpg"
   }
 ]
