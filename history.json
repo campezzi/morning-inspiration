@@ -350,5 +350,16 @@
     "source_name": "Wikimedia Commons",
     "source_url": "https://commons.wikimedia.org/wiki/File:Amazing_stories_192808.jpg",
     "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Amazing_stories_192808.jpg/1280px-Amazing_stories_192808.jpg"
+  },
+  {
+    "date": "2026-06-09",
+    "mood": "wry",
+    "format": "Painting",
+    "title": "Netherlandish Proverbs",
+    "creator": "Pieter Bruegel the Elder",
+    "year": 1559,
+    "source_name": "Wikipedia",
+    "source_url": "https://en.wikipedia.org/wiki/Netherlandish_Proverbs",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Pieter_Brueghel_the_Elder_-_The_Dutch_Proverbs_-_Google_Art_Project.jpg/1280px-Pieter_Brueghel_the_Elder_-_The_Dutch_Proverbs_-_Google_Art_Project.jpg"
   }
 ]
