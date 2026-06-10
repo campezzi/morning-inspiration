@@ -372,5 +372,16 @@
     "source_name": "Wikipedia",
     "source_url": "https://en.wikipedia.org/wiki/Eug%C3%A8ne_Atget",
     "image_url": "https://upload.wikimedia.org/wikipedia/commons/2/29/Atget_-_Magasin%2C_avenue_des_Gobelins._1925%2C_1.1969.1544.jpg"
+  },
+  {
+    "date": "2026-06-11",
+    "mood": "melancholic",
+    "format": "Music",
+    "title": "Dummy",
+    "creator": "Portishead",
+    "year": 1994,
+    "source_name": "Wikipedia",
+    "source_url": "https://en.wikipedia.org/wiki/Dummy_(album)",
+    "image_url": "https://upload.wikimedia.org/wikipedia/en/6/6b/Portishead_-_Dummy.png"
   }
 ]
