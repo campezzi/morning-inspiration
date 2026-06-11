@@ -383,5 +383,16 @@
     "source_name": "Wikipedia",
     "source_url": "https://en.wikipedia.org/wiki/Dummy_(album)",
     "image_url": "https://upload.wikimedia.org/wikipedia/en/6/6b/Portishead_-_Dummy.png"
+  },
+  {
+    "date": "2026-06-12",
+    "mood": "bold",
+    "format": "Motorsport",
+    "title": "1976 Italian Grand Prix",
+    "creator": "Niki Lauda",
+    "year": 1976,
+    "source_name": "Wikipedia",
+    "source_url": "https://en.wikipedia.org/wiki/1976_Italian_Grand_Prix",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/LaudaNiki19760731Ferrari312T2.jpg/1280px-LaudaNiki19760731Ferrari312T2.jpg"
   }
 ]
