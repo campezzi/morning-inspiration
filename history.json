@@ -394,5 +394,16 @@
     "source_name": "Wikipedia",
     "source_url": "https://en.wikipedia.org/wiki/1976_Italian_Grand_Prix",
     "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/LaudaNiki19760731Ferrari312T2.jpg/1280px-LaudaNiki19760731Ferrari312T2.jpg"
+  },
+  {
+    "date": "2026-06-13",
+    "mood": "uncanny",
+    "format": "Surreal",
+    "title": "The Son of Man",
+    "creator": "René Magritte",
+    "year": 1964,
+    "source_name": "Wikipedia",
+    "source_url": "https://en.wikipedia.org/wiki/The_Son_of_Man",
+    "image_url": "https://upload.wikimedia.org/wikipedia/en/e/e5/Magritte_TheSonOfMan.jpg"
   }
 ]
