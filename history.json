@@ -405,5 +405,16 @@
     "source_name": "Wikipedia",
     "source_url": "https://en.wikipedia.org/wiki/The_Son_of_Man",
     "image_url": "https://upload.wikimedia.org/wikipedia/en/e/e5/Magritte_TheSonOfMan.jpg"
+  },
+  {
+    "date": "2026-06-14",
+    "mood": "wry",
+    "format": "Painting",
+    "title": "The Third-Class Carriage",
+    "creator": "Honoré Daumier",
+    "year": 1864,
+    "source_name": "Wikipedia",
+    "source_url": "https://en.wikipedia.org/wiki/The_Third-Class_Carriage",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Honor%C3%A9_Daumier%2C_The_Third-Class_Carriage_-_The_Metropolitan_Museum_of_Art.jpg/1280px-Honor%C3%A9_Daumier%2C_The_Third-Class_Carriage_-_The_Metropolitan_Museum_of_Art.jpg"
   }
 ]
