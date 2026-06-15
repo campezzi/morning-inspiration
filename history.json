@@ -427,5 +427,16 @@
     "source_name": "Wikipedia",
     "source_url": "https://en.wikipedia.org/wiki/Endtroducing.....",
     "image_url": "https://upload.wikimedia.org/wikipedia/en/c/c1/Endtroducingcover.jpg"
+  },
+  {
+    "date": "2026-06-16",
+    "mood": "playful",
+    "format": "Comic",
+    "title": "Krazy Kat",
+    "creator": "George Herriman",
+    "year": 1913,
+    "source_name": "Wikipedia",
+    "source_url": "https://en.wikipedia.org/wiki/Krazy_Kat",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/9/94/Krazy_Kat_Goes_A-Wooing.jpg"
   }
 ]
