@@ -438,5 +438,16 @@
     "source_name": "Wikipedia",
     "source_url": "https://en.wikipedia.org/wiki/Krazy_Kat",
     "image_url": "https://upload.wikimedia.org/wikipedia/commons/9/94/Krazy_Kat_Goes_A-Wooing.jpg"
+  },
+  {
+    "date": "2026-06-17",
+    "mood": "contemplative",
+    "format": "Architecture",
+    "title": "Brion Vega Cemetery",
+    "creator": "Carlo Scarpa",
+    "year": 1978,
+    "source_name": "Wikipedia",
+    "source_url": "https://en.wikipedia.org/wiki/Brion_Cemetery",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/9/92/31_Tomba_Brion_-_San_Vito_d%27Altivole%2C_Treviso%2C_Italy_-_Carlo_Scarpa-FPPL3028.jpg"
   }
 ]
