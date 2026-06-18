@@ -460,5 +460,16 @@
     "source_name": "Wikipedia",
     "source_url": "https://en.wikipedia.org/wiki/Mirror_(1975_film)",
     "image_url": "https://upload.wikimedia.org/wikipedia/en/6/64/Mirror_%281975_film%29_original_poster.jpg"
+  },
+  {
+    "date": "2026-06-19",
+    "mood": "bold",
+    "format": "Music",
+    "title": "Rain Dogs",
+    "creator": "Tom Waits",
+    "year": 1985,
+    "source_name": "Wikipedia",
+    "source_url": "https://en.wikipedia.org/wiki/Rain_Dogs",
+    "image_url": "https://upload.wikimedia.org/wikipedia/en/6/60/Tom_Waits_-_Rain_Dogs.png"
   }
 ]
