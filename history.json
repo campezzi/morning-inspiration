@@ -471,5 +471,16 @@
     "source_name": "Wikipedia",
     "source_url": "https://en.wikipedia.org/wiki/Rain_Dogs",
     "image_url": "https://upload.wikimedia.org/wikipedia/en/6/60/Tom_Waits_-_Rain_Dogs.png"
+  },
+  {
+    "date": "2026-06-20",
+    "mood": "wry",
+    "format": "History",
+    "title": "The Cadaver Synod",
+    "creator": "Pope Stephen VI",
+    "year": 897,
+    "source_name": "Wikipedia",
+    "source_url": "https://en.wikipedia.org/wiki/Cadaver_Synod",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Jean_Paul_Laurens_Le_Pape_Formose_et_Etienne_VI_1870.jpg/1280px-Jean_Paul_Laurens_Le_Pape_Formose_et_Etienne_VI_1870.jpg"
   }
 ]
