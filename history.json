@@ -482,5 +482,16 @@
     "source_name": "Wikipedia",
     "source_url": "https://en.wikipedia.org/wiki/Cadaver_Synod",
     "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Jean_Paul_Laurens_Le_Pape_Formose_et_Etienne_VI_1870.jpg/1280px-Jean_Paul_Laurens_Le_Pape_Formose_et_Etienne_VI_1870.jpg"
+  },
+  {
+    "date": "2026-06-21",
+    "mood": "restless",
+    "format": "Motorsport",
+    "title": "1979 French Grand Prix",
+    "creator": "Gilles Villeneuve",
+    "year": 1979,
+    "source_name": "Wikipedia",
+    "source_url": "https://en.wikipedia.org/wiki/1979_French_Grand_Prix",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/0/0e/Gilles_Villeneuve_imola_1979.jpg"
   }
 ]
