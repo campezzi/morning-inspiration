@@ -493,5 +493,16 @@
     "source_name": "Wikipedia",
     "source_url": "https://en.wikipedia.org/wiki/1979_French_Grand_Prix",
     "image_url": "https://upload.wikimedia.org/wikipedia/commons/0/0e/Gilles_Villeneuve_imola_1979.jpg"
+  },
+  {
+    "date": "2026-06-22",
+    "mood": "playful",
+    "format": "Cars",
+    "title": "Lamborghini Miura",
+    "creator": "Marcello Gandini / Bertone",
+    "year": 1966,
+    "source_name": "Wikipedia",
+    "source_url": "https://en.wikipedia.org/wiki/Lamborghini_Miura",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Lamborghini_Miura_P400_S_Classic-Days_2022_DSC_0086.jpg/1280px-Lamborghini_Miura_P400_S_Classic-Days_2022_DSC_0086.jpg"
   }
 ]
