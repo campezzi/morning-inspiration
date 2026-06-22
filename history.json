@@ -504,5 +504,16 @@
     "source_name": "Wikipedia",
     "source_url": "https://en.wikipedia.org/wiki/Lamborghini_Miura",
     "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Lamborghini_Miura_P400_S_Classic-Days_2022_DSC_0086.jpg/1280px-Lamborghini_Miura_P400_S_Classic-Days_2022_DSC_0086.jpg"
+  },
+  {
+    "date": "2026-06-23",
+    "mood": "uncanny",
+    "format": "Painting",
+    "title": "Isle of the Dead",
+    "creator": "Arnold Böcklin",
+    "year": 1880,
+    "source_name": "Wikipedia",
+    "source_url": "https://en.wikipedia.org/wiki/Isle_of_the_Dead_(painting)",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Arnold_B%C3%B6cklin_-_Die_Toteninsel_I_%28Basel%2C_Kunstmuseum%29.jpg/1280px-Arnold_B%C3%B6cklin_-_Die_Toteninsel_I_%28Basel%2C_Kunstmuseum%29.jpg"
   }
 ]
