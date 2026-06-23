@@ -515,5 +515,16 @@
     "source_name": "Wikipedia",
     "source_url": "https://en.wikipedia.org/wiki/Isle_of_the_Dead_(painting)",
     "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Arnold_B%C3%B6cklin_-_Die_Toteninsel_I_%28Basel%2C_Kunstmuseum%29.jpg/1280px-Arnold_B%C3%B6cklin_-_Die_Toteninsel_I_%28Basel%2C_Kunstmuseum%29.jpg"
+  },
+  {
+    "date": "2026-06-24",
+    "mood": "melancholic",
+    "format": "Passage",
+    "title": "The Notebooks of Malte Laurids Brigge",
+    "creator": "Rainer Maria Rilke",
+    "year": 1910,
+    "source_name": "Wikipedia",
+    "source_url": "https://en.wikipedia.org/wiki/The_Notebooks_of_Malte_Laurids_Brigge",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/7/79/Rainer_Maria_Rilke%2C_1900.jpg"
   }
 ]
