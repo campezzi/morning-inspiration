@@ -526,5 +526,16 @@
     "source_name": "Wikipedia",
     "source_url": "https://en.wikipedia.org/wiki/The_Notebooks_of_Malte_Laurids_Brigge",
     "image_url": "https://upload.wikimedia.org/wikipedia/commons/7/79/Rainer_Maria_Rilke%2C_1900.jpg"
+  },
+  {
+    "date": "2026-06-25",
+    "mood": "contemplative",
+    "format": "Space",
+    "title": "Pale Blue Dot",
+    "creator": "NASA / Voyager 1",
+    "year": 1990,
+    "source_name": "Wikipedia",
+    "source_url": "https://en.wikipedia.org/wiki/Pale_Blue_Dot",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Pale_Blue_Dot.png/1280px-Pale_Blue_Dot.png"
   }
 ]
