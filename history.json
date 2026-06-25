@@ -537,5 +537,16 @@
     "source_name": "Wikipedia",
     "source_url": "https://en.wikipedia.org/wiki/Pale_Blue_Dot",
     "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Pale_Blue_Dot.png/1280px-Pale_Blue_Dot.png"
+  },
+  {
+    "date": "2026-06-26",
+    "mood": "bold",
+    "format": "Music",
+    "title": "Elephant",
+    "creator": "The White Stripes",
+    "year": 2003,
+    "source_name": "Wikipedia",
+    "source_url": "https://en.wikipedia.org/wiki/Elephant_(album)",
+    "image_url": "https://upload.wikimedia.org/wikipedia/en/1/11/Elephant%2C_The_White_Stripes.png"
   }
 ]
