@@ -548,5 +548,16 @@
     "source_name": "Wikipedia",
     "source_url": "https://en.wikipedia.org/wiki/Elephant_(album)",
     "image_url": "https://upload.wikimedia.org/wikipedia/en/1/11/Elephant%2C_The_White_Stripes.png"
+  },
+  {
+    "date": "2026-06-27",
+    "mood": "restless",
+    "format": "Film",
+    "title": "À bout de souffle",
+    "creator": "Jean-Luc Godard",
+    "year": 1960,
+    "source_name": "Wikipedia",
+    "source_url": "https://en.wikipedia.org/wiki/%C3%80_bout_de_souffle",
+    "image_url": "https://upload.wikimedia.org/wikipedia/en/3/3f/%C3%80_bout_de_souffle_%28movie_poster%29.jpg"
   }
 ]
