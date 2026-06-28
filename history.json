@@ -570,5 +570,16 @@
     "source_name": "Wikipedia",
     "source_url": "https://en.wikipedia.org/wiki/The_Devil%27s_Dictionary",
     "image_url": "https://upload.wikimedia.org/wikipedia/commons/5/57/Abierce.jpg"
+  },
+  {
+    "date": "2026-06-29",
+    "mood": "uncanny",
+    "format": "Surreal",
+    "title": "The Elephant Celebes",
+    "creator": "Max Ernst",
+    "year": 1921,
+    "source_name": "Wikipedia",
+    "source_url": "https://en.wikipedia.org/wiki/The_Elephant_Celebes",
+    "image_url": "https://upload.wikimedia.org/wikipedia/en/2/2b/The_Elephant_Celebes.jpg"
   }
 ]
