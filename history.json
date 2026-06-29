@@ -581,5 +581,16 @@
     "source_name": "Wikipedia",
     "source_url": "https://en.wikipedia.org/wiki/The_Elephant_Celebes",
     "image_url": "https://upload.wikimedia.org/wikipedia/en/2/2b/The_Elephant_Celebes.jpg"
+  },
+  {
+    "date": "2026-06-30",
+    "mood": "contemplative",
+    "format": "Architecture",
+    "title": "Therme Vals",
+    "creator": "Peter Zumthor",
+    "year": 1996,
+    "source_name": "Wikipedia",
+    "source_url": "https://en.wikipedia.org/wiki/Therme_Vals",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/0/0a/2005-08-06-Therme-Vals-Peter-Zumthor_07.jpg"
   }
 ]
