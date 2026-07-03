@@ -614,5 +614,16 @@
     "source_name": "Wikipedia",
     "source_url": "https://en.wikipedia.org/wiki/1984_Monaco_Grand_Prix",
     "image_url": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Ayrton_Senna_Toleman_TG184_1984_British_GP_Brands_Hatch_001.jpg"
+  },
+  {
+    "date": "2026-07-04",
+    "mood": "bold",
+    "format": "Sculpture/Installation",
+    "title": "Fulcrum",
+    "creator": "Richard Serra",
+    "year": 1987,
+    "source_name": "Wikipedia",
+    "source_url": "https://en.wikipedia.org/wiki/Fulcrum_(sculpture)",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/6/60/Richard_Serra_Fulcrum_%2828571152592%29.jpg"
   }
 ]
