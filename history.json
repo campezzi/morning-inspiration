@@ -625,5 +625,16 @@
     "source_name": "Wikipedia",
     "source_url": "https://en.wikipedia.org/wiki/Fulcrum_(sculpture)",
     "image_url": "https://upload.wikimedia.org/wikipedia/commons/6/60/Richard_Serra_Fulcrum_%2828571152592%29.jpg"
+  },
+  {
+    "date": "2026-07-06",
+    "mood": "playful",
+    "format": "Comedy",
+    "title": "2000 Years With Carl Reiner & Mel Brooks",
+    "creator": "Mel Brooks & Carl Reiner",
+    "year": 1960,
+    "source_name": "Wikipedia",
+    "source_url": "https://en.wikipedia.org/wiki/2000_Year_Old_Man",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/9/94/MelBrooksApr10.jpg"
   }
 ]
