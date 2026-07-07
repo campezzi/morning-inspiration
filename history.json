@@ -647,5 +647,16 @@
     "source_name": "Wikipedia",
     "source_url": "https://en.wikipedia.org/wiki/Fra_Mauro_map",
     "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Fra_Mauro_Map_FactumArte.jpg/1280px-Fra_Mauro_Map_FactumArte.jpg"
+  },
+  {
+    "date": "2026-07-08",
+    "mood": "wry",
+    "format": "Street Photography",
+    "title": "The Critic",
+    "creator": "Weegee",
+    "year": 1943,
+    "source_name": "SFMOMA",
+    "source_url": "https://www.sfmoma.org/artwork/84.172/",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/0/03/The_Critic_by_Weegee.jpg"
   }
 ]
