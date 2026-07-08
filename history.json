@@ -658,5 +658,16 @@
     "source_name": "SFMOMA",
     "source_url": "https://www.sfmoma.org/artwork/84.172/",
     "image_url": "https://upload.wikimedia.org/wikipedia/commons/0/03/The_Critic_by_Weegee.jpg"
+  },
+  {
+    "date": "2026-07-09",
+    "mood": "melancholic",
+    "format": "Painting",
+    "title": "Automat",
+    "creator": "Edward Hopper",
+    "year": 1927,
+    "source_name": "Wikipedia",
+    "source_url": "https://en.wikipedia.org/wiki/Automat_(Hopper)",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/b/bc/Automat-edward-hopper-1927.jpg"
   }
 ]
