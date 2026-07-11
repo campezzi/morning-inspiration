@@ -691,5 +691,16 @@
     "source_name": "Wikipedia",
     "source_url": "https://en.wikipedia.org/wiki/Mean_Streets",
     "image_url": "https://upload.wikimedia.org/wikipedia/en/2/26/Mean_Streets_original_1973_theatrical_poster.png"
+  },
+  {
+    "date": "2026-07-12",
+    "mood": "contemplative",
+    "format": "Architecture",
+    "title": "St Peter's Church, Klippan",
+    "creator": "Sigurd Lewerentz",
+    "year": 1966,
+    "source_name": "Wikipedia",
+    "source_url": "https://en.wikipedia.org/wiki/Sigurd_Lewerentz",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/5/54/St_Petri_kyrka_entre.JPG"
   }
 ]
