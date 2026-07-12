@@ -702,5 +702,16 @@
     "source_name": "Wikipedia",
     "source_url": "https://en.wikipedia.org/wiki/Sigurd_Lewerentz",
     "image_url": "https://upload.wikimedia.org/wikipedia/commons/5/54/St_Petri_kyrka_entre.JPG"
+  },
+  {
+    "date": "2026-07-13",
+    "mood": "playful",
+    "format": "Video Game",
+    "title": "Super Pac-Man",
+    "creator": "Namco",
+    "year": 1982,
+    "source_name": "Wikipedia",
+    "source_url": "https://en.wikipedia.org/wiki/Super_Pac-Man",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/c/c6/Super_Pac-Man_-_Bally_Midway_Namco_arcade_cabinet.jpg"
   }
 ]
