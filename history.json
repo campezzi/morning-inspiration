@@ -713,5 +713,16 @@
     "source_name": "Wikipedia",
     "source_url": "https://en.wikipedia.org/wiki/Super_Pac-Man",
     "image_url": "https://upload.wikimedia.org/wikipedia/commons/c/c6/Super_Pac-Man_-_Bally_Midway_Namco_arcade_cabinet.jpg"
+  },
+  {
+    "date": "2026-07-14",
+    "mood": "uncanny",
+    "format": "Imagined Worlds",
+    "title": "The Gothic Arch",
+    "creator": "Giovanni Battista Piranesi",
+    "year": 1761,
+    "source_name": "Wikipedia",
+    "source_url": "https://en.wikipedia.org/wiki/Carceri_d%27Invenzione",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/0/0b/Giovanni_Battista_Piranesi_-_Le_Carceri_d%27Invenzione_-_Second_Edition_-_1761_-_14_-_The_Gothic_Arch.jpg"
   }
 ]
