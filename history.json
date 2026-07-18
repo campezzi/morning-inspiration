@@ -746,5 +746,16 @@
     "source_name": "Wikipedia",
     "source_url": "https://en.wikipedia.org/wiki/Athletics_at_the_1904_Summer_Olympics_%E2%80%93_Men%27s_marathon",
     "image_url": "https://upload.wikimedia.org/wikipedia/commons/5/57/1904_Olympics-_Thomas_J._Hicks%2C_Boston%2C_winner_of_the_Marathon_Race_resting_in_a_car_after_the_finish.jpg"
+  },
+  {
+    "date": "2026-07-19",
+    "mood": "bold",
+    "format": "Aviation",
+    "title": "Glamorous Glennis",
+    "creator": "Chuck Yeager",
+    "year": 1947,
+    "source_name": "National Air and Space Museum",
+    "source_url": "https://airandspace.si.edu/stories/editorial/breaking-sound-barrier",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/5/50/Bell_X-1_46-062_%28in_flight%29.jpg"
   }
 ]
