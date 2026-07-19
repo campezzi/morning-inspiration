@@ -757,5 +757,16 @@
     "source_name": "National Air and Space Museum",
     "source_url": "https://airandspace.si.edu/stories/editorial/breaking-sound-barrier",
     "image_url": "https://upload.wikimedia.org/wikipedia/commons/5/50/Bell_X-1_46-062_%28in_flight%29.jpg"
+  },
+  {
+    "date": "2026-07-20",
+    "mood": "restless",
+    "format": "Cars",
+    "title": "Porsche 917K",
+    "creator": "Porsche",
+    "year": 1970,
+    "source_name": "Wikipedia",
+    "source_url": "https://en.wikipedia.org/wiki/Porsche_917",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/f/f4/Porsche_917K_%28Gulf%29_front-right_Porsche_Museum.jpg"
   }
 ]
