@@ -768,5 +768,16 @@
     "source_name": "Wikipedia",
     "source_url": "https://en.wikipedia.org/wiki/Porsche_917",
     "image_url": "https://upload.wikimedia.org/wikipedia/commons/f/f4/Porsche_917K_%28Gulf%29_front-right_Porsche_Museum.jpg"
+  },
+  {
+    "date": "2026-07-21",
+    "mood": "contemplative",
+    "format": "Architecture",
+    "title": "Brion Cemetery",
+    "creator": "Carlo Scarpa",
+    "year": 1978,
+    "source_name": "Wikipedia",
+    "source_url": "https://en.wikipedia.org/wiki/Brion-Vega_Cemetery",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/6/67/06_Tomba_Brion_-_San_Vito_d%27Altivole%2C_Treviso%2C_Italy_-_Carlo_Scarpa-FPPL2915.jpg"
   }
 ]
