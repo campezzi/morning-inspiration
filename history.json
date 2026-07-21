@@ -779,5 +779,16 @@
     "source_name": "Wikipedia",
     "source_url": "https://en.wikipedia.org/wiki/Brion-Vega_Cemetery",
     "image_url": "https://upload.wikimedia.org/wikipedia/commons/6/67/06_Tomba_Brion_-_San_Vito_d%27Altivole%2C_Treviso%2C_Italy_-_Carlo_Scarpa-FPPL2915.jpg"
+  },
+  {
+    "date": "2026-07-22",
+    "mood": "playful",
+    "format": "Video Game",
+    "title": "BurgerTime",
+    "creator": "Data East",
+    "year": 1982,
+    "source_name": "Wikipedia",
+    "source_url": "https://en.wikipedia.org/wiki/BurgerTime",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/8/80/BurgerTime_Arcade_Video_Game.jpg"
   }
 ]
