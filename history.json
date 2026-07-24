@@ -801,5 +801,16 @@
     "source_name": "Wikipedia",
     "source_url": "https://en.wikipedia.org/wiki/Mystery_and_Melancholy_of_a_Street",
     "image_url": "https://upload.wikimedia.org/wikipedia/commons/d/d5/Giorgio_de_Chirico_-_Myst%C3%A8re_et_m%C3%A9lancolie_d%27une_rue.jpg"
+  },
+  {
+    "date": "2026-07-25",
+    "mood": "bold",
+    "format": "Passage",
+    "title": "Blood Meridian",
+    "creator": "Cormac McCarthy",
+    "year": 1985,
+    "source_name": "Wikipedia",
+    "source_url": "https://en.wikipedia.org/wiki/Blood_Meridian",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/2/20/Cormac_McCarthy_%281980_portrait%2C_Lexington_Leader%29.jpg"
   }
 ]
