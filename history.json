@@ -812,5 +812,16 @@
     "source_name": "Wikipedia",
     "source_url": "https://en.wikipedia.org/wiki/Blood_Meridian",
     "image_url": "https://upload.wikimedia.org/wikipedia/commons/2/20/Cormac_McCarthy_%281980_portrait%2C_Lexington_Leader%29.jpg"
+  },
+  {
+    "date": "2026-07-26",
+    "mood": "restless",
+    "format": "Music",
+    "title": "Boogie Stop Shuffle",
+    "creator": "Charles Mingus",
+    "year": 1959,
+    "source_name": "Wikipedia",
+    "source_url": "https://en.wikipedia.org/wiki/Mingus_Ah_Um",
+    "image_url": "https://upload.wikimedia.org/wikipedia/en/6/65/Mingus_Ah_Um_-_Charles_Mingus.jpg"
   }
 ]
