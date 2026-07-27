@@ -834,5 +834,16 @@
     "source_name": "Wikipedia",
     "source_url": "https://en.wikipedia.org/wiki/Tokyo_Story",
     "image_url": "https://upload.wikimedia.org/wikipedia/commons/8/86/Tokyo_monogatari_poster.jpg"
+  },
+  {
+    "date": "2026-07-28",
+    "mood": "wry",
+    "format": "Comedy",
+    "title": "Résumé",
+    "creator": "Dorothy Parker",
+    "year": 1926,
+    "source_name": "Wikipedia",
+    "source_url": "https://en.wikipedia.org/wiki/Dorothy_Parker",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/e/e4/Enough_Rope_by_Dorothy_Parker.jpg"
   }
 ]
