@@ -845,5 +845,16 @@
     "source_name": "Wikipedia",
     "source_url": "https://en.wikipedia.org/wiki/Dorothy_Parker",
     "image_url": "https://upload.wikimedia.org/wikipedia/commons/e/e4/Enough_Rope_by_Dorothy_Parker.jpg"
+  },
+  {
+    "date": "2026-07-29",
+    "mood": "contemplative",
+    "format": "Painting",
+    "title": "Interior in Strandgade, Sunlight on the Floor",
+    "creator": "Vilhelm Hammershøi",
+    "year": 1901,
+    "source_name": "SMK — National Gallery of Denmark",
+    "source_url": "https://open.smk.dk/artwork/image/KMS3696",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/0/0f/Vilhelm_Hammersh%C3%B8i_-_Interior_from_Strandgade_with_Sunlight_on_the_Floor.jpg"
   }
 ]
