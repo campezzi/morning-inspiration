@@ -878,5 +878,16 @@
     "source_name": "Wikipedia",
     "source_url": "https://en.wikipedia.org/wiki/Bruno_Munari",
     "image_url": "https://upload.wikimedia.org/wikipedia/commons/c/cf/Posacenere_Cubo%2C_Bruno_Munari_1957-01.png"
+  },
+  {
+    "date": "2026-08-02",
+    "mood": "restless",
+    "format": "Motorsport",
+    "title": "1955 Mille Miglia",
+    "creator": "Stirling Moss",
+    "year": 1955,
+    "source_name": "Wikipedia",
+    "source_url": "https://en.wikipedia.org/wiki/1955_Mille_Miglia",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/d/d6/1955-05-01_Mille_Miglia_winner_Mercedes_300_SLR_Moss_e_Jenkinson.jpg"
   }
 ]
