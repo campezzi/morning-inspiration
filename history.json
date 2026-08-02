@@ -829,7 +829,7 @@
     "mood": "melancholic",
     "format": "Film",
     "title": "Tokyo Story",
-    "creator": "Yasujirō Ozu",
+    "creator": "Yasujir\u014d Ozu",
     "year": 1953,
     "source_name": "Wikipedia",
     "source_url": "https://en.wikipedia.org/wiki/Tokyo_Story",
@@ -839,7 +839,7 @@
     "date": "2026-07-28",
     "mood": "wry",
     "format": "Comedy",
-    "title": "Résumé",
+    "title": "R\u00e9sum\u00e9",
     "creator": "Dorothy Parker",
     "year": 1926,
     "source_name": "Wikipedia",
@@ -851,9 +851,9 @@
     "mood": "contemplative",
     "format": "Painting",
     "title": "Interior in Strandgade, Sunlight on the Floor",
-    "creator": "Vilhelm Hammershøi",
+    "creator": "Vilhelm Hammersh\u00f8i",
     "year": 1901,
-    "source_name": "SMK — National Gallery of Denmark",
+    "source_name": "SMK \u2014 National Gallery of Denmark",
     "source_url": "https://open.smk.dk/artwork/image/KMS3696",
     "image_url": "https://upload.wikimedia.org/wikipedia/commons/0/0f/Vilhelm_Hammersh%C3%B8i_-_Interior_from_Strandgade_with_Sunlight_on_the_Floor.jpg"
   },
@@ -889,5 +889,16 @@
     "source_name": "Wikipedia",
     "source_url": "https://en.wikipedia.org/wiki/1955_Mille_Miglia",
     "image_url": "https://upload.wikimedia.org/wikipedia/commons/d/d6/1955-05-01_Mille_Miglia_winner_Mercedes_300_SLR_Moss_e_Jenkinson.jpg"
+  },
+  {
+    "date": "2026-08-03",
+    "mood": "uncanny",
+    "format": "Comic",
+    "title": "The Walking Bed",
+    "creator": "Winsor McCay",
+    "year": 1908,
+    "source_name": "Wikipedia",
+    "source_url": "https://en.wikipedia.org/wiki/Little_Nemo",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/6/6b/Little_nemo_the_walking_bed.jpg"
   }
 ]
