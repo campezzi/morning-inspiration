@@ -900,5 +900,16 @@
     "source_name": "Wikipedia",
     "source_url": "https://en.wikipedia.org/wiki/Little_Nemo",
     "image_url": "https://upload.wikimedia.org/wikipedia/commons/6/6b/Little_nemo_the_walking_bed.jpg"
+  },
+  {
+    "date": "2026-08-04",
+    "mood": "wry",
+    "format": "Painting",
+    "title": "Beware of Luxury",
+    "creator": "Jan Steen",
+    "year": 1663,
+    "source_name": "Wikipedia",
+    "source_url": "https://en.wikipedia.org/wiki/Beware_of_Luxury",
+    "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Jan_Steen_-_Beware_of_Luxury_(%E2%80%9CIn_Weelde_Siet_Toe%E2%80%9D)_-_Google_Art_Project.jpg?width=1600"
   }
 ]
