@@ -911,5 +911,16 @@
     "source_name": "Wikipedia",
     "source_url": "https://en.wikipedia.org/wiki/Beware_of_Luxury",
     "image_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Jan_Steen_-_Beware_of_Luxury_(%E2%80%9CIn_Weelde_Siet_Toe%E2%80%9D)_-_Google_Art_Project.jpg?width=1600"
+  },
+  {
+    "date": "2026-08-05",
+    "mood": "bold",
+    "format": "Space",
+    "title": "First Image of a Black Hole",
+    "creator": "Event Horizon Telescope Collaboration",
+    "year": 2019,
+    "source_name": "Wikipedia",
+    "source_url": "https://en.wikipedia.org/wiki/M87*",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/4/4f/Black_hole_-_Messier_87_crop_max_res.jpg"
   }
 ]
