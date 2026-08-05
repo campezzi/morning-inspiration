@@ -922,5 +922,16 @@
     "source_name": "Wikipedia",
     "source_url": "https://en.wikipedia.org/wiki/M87*",
     "image_url": "https://upload.wikimedia.org/wikipedia/commons/4/4f/Black_hole_-_Messier_87_crop_max_res.jpg"
+  },
+  {
+    "date": "2026-08-06",
+    "mood": "playful",
+    "format": "History",
+    "title": "The War of the Bucket",
+    "creator": "Modena",
+    "year": 1325,
+    "source_name": "Wikipedia",
+    "source_url": "https://en.wikipedia.org/wiki/War_of_the_Bucket",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/8/8b/SecchiaRapita.JPG"
   }
 ]
