@@ -988,5 +988,16 @@
     "source_name": "Wikimedia Commons",
     "source_url": "https://commons.wikimedia.org/wiki/File:Fulcrum_Richard_Serra_01.jpg",
     "image_url": "https://upload.wikimedia.org/wikipedia/commons/7/78/Fulcrum_Richard_Serra_01.jpg"
+  },
+  {
+    "date": "2026-08-12",
+    "mood": "contemplative",
+    "format": "Painting",
+    "title": "Woman at a Window",
+    "creator": "Caspar David Friedrich",
+    "year": 1822,
+    "source_name": "Alte Nationalgalerie, Berlin (via Wikimedia Commons)",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Caspar_David_Friedrich_-_Woman_at_a_Window_-_WGA8268.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/6/60/Caspar_David_Friedrich_-_Woman_at_a_Window_-_WGA8268.jpg"
   }
 ]
