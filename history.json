@@ -1021,5 +1021,16 @@
     "source_name": "Wikipedia",
     "source_url": "https://en.wikipedia.org/wiki/Fell_in_Love_with_a_Girl",
     "image_url": "https://upload.wikimedia.org/wikipedia/en/1/12/The_White_Stripes_-_White_Blood_Cells.jpg"
+  },
+  {
+    "date": "2026-08-15",
+    "mood": "wry",
+    "format": "Passage",
+    "title": "On Exactitude in Science",
+    "creator": "Jorge Luis Borges",
+    "year": 1946,
+    "source_name": "Wikipedia",
+    "source_url": "https://en.wikipedia.org/wiki/On_Exactitude_in_Science",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/e/eb/Cassini_map_of_France_68.png"
   }
 ]
