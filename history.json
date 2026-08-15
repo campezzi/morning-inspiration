@@ -1032,5 +1032,16 @@
     "source_name": "Wikipedia",
     "source_url": "https://en.wikipedia.org/wiki/On_Exactitude_in_Science",
     "image_url": "https://upload.wikimedia.org/wikipedia/commons/e/eb/Cassini_map_of_France_68.png"
+  },
+  {
+    "date": "2026-08-16",
+    "mood": "melancholic",
+    "format": "Painting",
+    "title": "At Eternity's Gate",
+    "creator": "Vincent van Gogh",
+    "year": 1890,
+    "source_name": "Wikipedia",
+    "source_url": "https://en.wikipedia.org/wiki/At_Eternity%27s_Gate",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/At_Eternity%27s_Gate_-_Vincent_Van_Gogh.jpg/1280px-At_Eternity%27s_Gate_-_Vincent_Van_Gogh.jpg"
   }
 ]
