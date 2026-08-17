@@ -1054,5 +1054,16 @@
     "source_name": "Wikipedia",
     "source_url": "https://en.wikipedia.org/wiki/The_Day_the_Earth_Smiled",
     "image_url": "https://upload.wikimedia.org/wikipedia/commons/4/4d/The_Day_the_Earth_Smiled_-_PIA17172.jpg"
+  },
+  {
+    "date": "2026-08-18",
+    "mood": "bold",
+    "format": "Music",
+    "title": "Smokestack Lightning",
+    "creator": "Howlin' Wolf",
+    "year": 1956,
+    "source_name": "Wikipedia",
+    "source_url": "https://en.wikipedia.org/wiki/Smokestack_Lightning",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/d/d1/Howlin%27_Wolf_1972.JPG"
   }
 ]
