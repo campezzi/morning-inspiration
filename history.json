@@ -1087,5 +1087,16 @@
     "source_name": "Wikipedia",
     "source_url": "https://en.wikipedia.org/wiki/Voynich_manuscript",
     "image_url": "https://upload.wikimedia.org/wikipedia/commons/5/5a/Voynich_Manuscript_%2833%29.jpg"
+  },
+  {
+    "date": "2026-08-21",
+    "mood": "wry",
+    "format": "Cartography",
+    "title": "Serio-Comic War Map for the Year 1877",
+    "creator": "Fred W. Rose",
+    "year": 1877,
+    "source_name": "Wikimedia Commons",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Serio-Comic_War_Map_For_The_Year_1877.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Serio-Comic_War_Map_For_The_Year_1877.jpg/1920px-Serio-Comic_War_Map_For_The_Year_1877.jpg"
   }
 ]
