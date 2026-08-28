@@ -1153,5 +1153,16 @@
     "source_name": "The Phillips Collection",
     "source_url": "https://www.phillipscollection.org/collection/sunday",
     "image_url": "https://upload.wikimedia.org/wikipedia/commons/f/f3/Sunday%2C_by_Edward_Hopper.jpg"
+  },
+  {
+    "date": "2026-08-28",
+    "mood": "contemplative",
+    "format": "Architecture",
+    "title": "Bruder Klaus Field Chapel",
+    "creator": "Peter Zumthor",
+    "year": 2007,
+    "source_name": "ArchDaily",
+    "source_url": "https://www.archdaily.com/106352/bruder-klaus-field-chapel-peter-zumthor",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/e/ef/Bruder_Klaus_Feldkapelle.JPG"
   }
 ]
