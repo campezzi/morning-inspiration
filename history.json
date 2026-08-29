@@ -1175,5 +1175,16 @@
     "source_name": "Wikimedia Commons",
     "source_url": "https://commons.wikimedia.org/wiki/File:Comet_67P_True_color.jpg",
     "image_url": "https://upload.wikimedia.org/wikipedia/commons/f/f9/Comet_67P_True_color.jpg"
+  },
+  {
+    "date": "2026-08-30",
+    "mood": "bold",
+    "format": "Sculpture/Installation",
+    "title": "Leviathan",
+    "creator": "Anish Kapoor",
+    "year": 2011,
+    "source_name": "Anish Kapoor",
+    "source_url": "https://anishkapoor.com/741/grand-palais-2011",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/b/b6/Anish_Kapoor-Leviathan-int.jpg"
   }
 ]
