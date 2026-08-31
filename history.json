@@ -1197,5 +1197,16 @@
     "source_name": "Wikimedia Commons",
     "source_url": "https://commons.wikimedia.org/wiki/File:1967_Alfa_Romeo_Tipo_33_Stradale_Prototipo_-_Flickr_-_exfordy.jpg",
     "image_url": "https://upload.wikimedia.org/wikipedia/commons/1/15/1967_Alfa_Romeo_Tipo_33_Stradale_Prototipo_-_Flickr_-_exfordy.jpg"
+  },
+  {
+    "date": "2026-09-01",
+    "mood": "melancholic",
+    "format": "Film",
+    "title": "L'Eclisse",
+    "creator": "Michelangelo Antonioni",
+    "year": 1962,
+    "source_name": "Wikipedia",
+    "source_url": "https://en.wikipedia.org/wiki/L%27Eclisse",
+    "image_url": "https://upload.wikimedia.org/wikipedia/en/7/7a/L%27Eclisse_film.jpg"
   }
 ]
