@@ -1208,5 +1208,16 @@
     "source_name": "Wikipedia",
     "source_url": "https://en.wikipedia.org/wiki/L%27Eclisse",
     "image_url": "https://upload.wikimedia.org/wikipedia/en/7/7a/L%27Eclisse_film.jpg"
+  },
+  {
+    "date": "2026-09-02",
+    "mood": "playful",
+    "format": "History",
+    "title": "Reynard the Fox Preaching to Geese",
+    "creator": "Unknown London Illuminator",
+    "year": 1340,
+    "source_name": "Wikimedia Commons",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Royal_MS_10_E_IV_fol_49v_Reynard_the_Fox_preaching_to_geese.png",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/4/4d/Royal_MS_10_E_IV_fol_49v_Reynard_the_Fox_preaching_to_geese.png"
   }
 ]
