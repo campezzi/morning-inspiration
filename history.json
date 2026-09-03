@@ -1230,5 +1230,16 @@
     "source_name": "Wikipedia",
     "source_url": "https://en.wikipedia.org/wiki/Advice_to_Youth",
     "image_url": "https://upload.wikimedia.org/wikipedia/commons/9/9d/Mark_Twain_1907.jpg"
+  },
+  {
+    "date": "2026-09-04",
+    "mood": "uncanny",
+    "format": "Imagined Worlds",
+    "title": "The Drawbridge",
+    "creator": "Giovanni Battista Piranesi",
+    "year": 1761,
+    "source_name": "Wikimedia Commons",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Giovanni_Battista_Piranesi_-_Le_Carceri_d%27Invenzione_-_Second_Edition_-_1761_-_07_-_The_Drawbridge.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/5/5a/Giovanni_Battista_Piranesi_-_Le_Carceri_d%27Invenzione_-_Second_Edition_-_1761_-_07_-_The_Drawbridge.jpg"
   }
 ]
