@@ -1318,5 +1318,16 @@
     "source_name": "Wikipedia",
     "source_url": "https://en.wikipedia.org/wiki/The_Passion_of_Joan_of_Arc",
     "image_url": "https://upload.wikimedia.org/wikipedia/en/7/71/PassionofJoanofArc.jpg"
+  },
+  {
+    "date": "2026-09-12",
+    "mood": "contemplative",
+    "format": "Architecture",
+    "title": "St. Petri Church, Klippan",
+    "creator": "Sigurd Lewerentz",
+    "year": 1966,
+    "source_name": "Wikipedia",
+    "source_url": "https://en.wikipedia.org/wiki/Sigurd_Lewerentz",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/1/16/Sankt_Petri_kyrka_i_Klippan_kyrkosalen.jpg"
   }
 ]
