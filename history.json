@@ -1329,5 +1329,16 @@
     "source_name": "Wikipedia",
     "source_url": "https://en.wikipedia.org/wiki/Sigurd_Lewerentz",
     "image_url": "https://upload.wikimedia.org/wikipedia/commons/1/16/Sankt_Petri_kyrka_i_Klippan_kyrkosalen.jpg"
+  },
+  {
+    "date": "2026-09-13",
+    "mood": "bold",
+    "format": "Painting",
+    "title": "Fight with Cudgels",
+    "creator": "Francisco Goya",
+    "year": 1820,
+    "source_name": "Museo del Prado, Madrid — via Wikipedia",
+    "source_url": "https://en.wikipedia.org/wiki/Fight_with_Cudgels",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/4/45/Francisco_de_Goya_y_Lucientes_-_Duel_with_Cudgels_-_WGA10102.jpg"
   }
 ]
