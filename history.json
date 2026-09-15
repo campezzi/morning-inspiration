@@ -1362,5 +1362,16 @@
     "source_name": "Wikimedia Commons",
     "source_url": "https://commons.wikimedia.org/wiki/File:Carta_Marina.jpeg",
     "image_url": "https://upload.wikimedia.org/wikipedia/commons/e/ea/Carta_Marina.jpeg"
+  },
+  {
+    "date": "2026-09-16",
+    "mood": "wry",
+    "format": "Comedy",
+    "title": "The Chinese Restaurant",
+    "creator": "Seinfeld",
+    "year": 1991,
+    "source_name": "Wikipedia",
+    "source_url": "https://en.wikipedia.org/wiki/The_Chinese_Restaurant",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/2/28/Jerry_Seinfeld_Julia_Louis-Dreyfus2.jpg"
   }
 ]
