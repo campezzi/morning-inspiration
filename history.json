@@ -1384,5 +1384,16 @@
     "source_name": "Wikipedia",
     "source_url": "https://en.wikipedia.org/wiki/Pillars_of_Creation",
     "image_url": "https://upload.wikimedia.org/wikipedia/commons/b/b2/Eagle_nebula_pillars.jpg"
+  },
+  {
+    "date": "2026-09-18",
+    "mood": "melancholic",
+    "format": "Music",
+    "title": "Pink Moon",
+    "creator": "Nick Drake",
+    "year": 1972,
+    "source_name": "Wikipedia",
+    "source_url": "https://en.wikipedia.org/wiki/Pink_Moon",
+    "image_url": "https://upload.wikimedia.org/wikipedia/en/3/3c/NickDrakePinkMoon.jpg"
   }
 ]
