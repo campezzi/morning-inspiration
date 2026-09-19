@@ -1406,5 +1406,16 @@
     "source_name": "Wikipedia",
     "source_url": "https://en.wikipedia.org/wiki/Arzach",
     "image_url": "https://upload.wikimedia.org/wikipedia/en/f/f0/Arzach.jpg"
+  },
+  {
+    "date": "2026-09-20",
+    "mood": "bold",
+    "format": "Aviation",
+    "title": "Hindenburg Disaster",
+    "creator": "Sam Shere",
+    "year": 1937,
+    "source_name": "Wikipedia",
+    "source_url": "https://en.wikipedia.org/wiki/Hindenburg_disaster",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/1/1c/Hindenburg_disaster.jpg"
   }
 ]
