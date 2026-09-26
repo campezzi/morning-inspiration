@@ -1483,5 +1483,16 @@
     "source_name": "Wikisource",
     "source_url": "https://en.wikisource.org/wiki/Mystery_Tales_of_Edgar_Allan_Poe/The_Tell-Tale_Heart",
     "image_url": "https://upload.wikimedia.org/wikipedia/commons/1/10/Daguerreotype_of_Edgar_Allan_Poe_1849.png"
+  },
+  {
+    "date": "2026-09-27",
+    "mood": "wry",
+    "format": "Comedy",
+    "title": "The Driving Instructor",
+    "creator": "Bob Newhart",
+    "year": 1960,
+    "source_name": "Wikipedia",
+    "source_url": "https://en.wikipedia.org/wiki/The_Button-Down_Mind_of_Bob_Newhart",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/d/de/Bob_Newhart_crop.jpg"
   }
 ]
