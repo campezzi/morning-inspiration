@@ -1494,5 +1494,16 @@
     "source_name": "Wikipedia",
     "source_url": "https://en.wikipedia.org/wiki/The_Button-Down_Mind_of_Bob_Newhart",
     "image_url": "https://upload.wikimedia.org/wikipedia/commons/d/de/Bob_Newhart_crop.jpg"
+  },
+  {
+    "date": "2026-09-28",
+    "mood": "restless",
+    "format": "Street Photography",
+    "title": "The Critic",
+    "creator": "Weegee",
+    "year": 1943,
+    "source_name": "Wikipedia",
+    "source_url": "https://en.wikipedia.org/wiki/Weegee",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/0/03/The_Critic_by_Weegee.jpg"
   }
 ]
