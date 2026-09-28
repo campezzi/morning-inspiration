@@ -1505,5 +1505,16 @@
     "source_name": "Wikipedia",
     "source_url": "https://en.wikipedia.org/wiki/Weegee",
     "image_url": "https://upload.wikimedia.org/wikipedia/commons/0/03/The_Critic_by_Weegee.jpg"
+  },
+  {
+    "date": "2026-09-29",
+    "mood": "playful",
+    "format": "Video Game",
+    "title": "Space Invaders",
+    "creator": "Tomohiro Nishikado",
+    "year": 1978,
+    "source_name": "Wikipedia",
+    "source_url": "https://en.wikipedia.org/wiki/Space_Invaders",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/5/5e/Space_Invaders.JPG"
   }
 ]
