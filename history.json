@@ -1637,5 +1637,16 @@
     "source_name": "Wikipedia",
     "source_url": "https://en.wikipedia.org/wiki/Animal_trial",
     "image_url": "https://upload.wikimedia.org/wikipedia/commons/6/65/Trial_of_a_sow_and_pigs_at_Lavegny.png"
+  },
+  {
+    "date": "2026-10-11",
+    "mood": "melancholic",
+    "format": "Painting",
+    "title": "Paris Street; Rainy Day",
+    "creator": "Gustave Caillebotte",
+    "year": 1877,
+    "source_name": "Art Institute of Chicago, via Wikimedia Commons",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Gustave_Caillebotte_-_Paris_Street;_Rainy_Day_-_Google_Art_Project.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Gustave_Caillebotte_-_Paris_Street%3B_Rainy_Day_-_Google_Art_Project.jpg/1920px-Gustave_Caillebotte_-_Paris_Street%3B_Rainy_Day_-_Google_Art_Project.jpg"
   }
 ]
