@@ -1659,5 +1659,16 @@
     "source_name": "Detroit Institute of Arts",
     "source_url": "https://en.wikipedia.org/wiki/The_Nightmare",
     "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Johann_Heinrich_F%C3%BCssli_-_The_Nightmare_55.5.A-d1-2019-04-15.jpg/1920px-Johann_Heinrich_F%C3%BCssli_-_The_Nightmare_55.5.A-d1-2019-04-15.jpg"
+  },
+  {
+    "date": "2026-10-13",
+    "mood": "playful",
+    "format": "Cartography",
+    "title": "The London Underground Map",
+    "creator": "Harry Beck",
+    "year": 1933,
+    "source_name": "Wikimedia Commons",
+    "source_url": "https://en.wikipedia.org/wiki/Tube_map",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Beckmap1.jpg"
   }
 ]
