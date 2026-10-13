@@ -1670,5 +1670,16 @@
     "source_name": "Wikimedia Commons",
     "source_url": "https://en.wikipedia.org/wiki/Tube_map",
     "image_url": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Beckmap1.jpg"
+  },
+  {
+    "date": "2026-10-14",
+    "mood": "contemplative",
+    "format": "Passage",
+    "title": "Walden, \"The Ponds\"",
+    "creator": "Henry David Thoreau",
+    "year": 1854,
+    "source_name": "Project Gutenberg",
+    "source_url": "https://www.gutenberg.org/ebooks/205",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/6/62/Walden_Pond_beach_in_autumn%2C_Concord_MA.jpg"
   }
 ]
