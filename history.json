@@ -1780,5 +1780,16 @@
     "source_name": "Wikipedia",
     "source_url": "https://en.wikipedia.org/wiki/Chet_Baker_Sings",
     "image_url": "https://upload.wikimedia.org/wikipedia/en/6/60/Chet_Baker_Sings.jpg"
+  },
+  {
+    "date": "2026-10-24",
+    "mood": "bold",
+    "format": "Aviation",
+    "title": "SR-71B Takeoff on Afterburner",
+    "creator": "NASA / Lockheed SR-71",
+    "year": 1992,
+    "source_name": "Wikimedia Commons",
+    "source_url": "https://commons.wikimedia.org/wiki/File:SR-71_Takeoff_with_Afterburner_Showing_Shock_Diamonds_in_Exhaust.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/6/62/SR-71_Takeoff_with_Afterburner_Showing_Shock_Diamonds_in_Exhaust.jpg"
   }
 ]
