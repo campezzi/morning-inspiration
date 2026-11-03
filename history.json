@@ -1901,5 +1901,16 @@
     "source_name": "Wikimedia Commons",
     "source_url": "https://commons.wikimedia.org/wiki/File:Apollo_12_Saturn_V_launch.jpg",
     "image_url": "https://upload.wikimedia.org/wikipedia/commons/2/25/Apollo_12_Saturn_V_launch.jpg"
+  },
+  {
+    "date": "2026-11-04",
+    "mood": "melancholic",
+    "format": "Painting",
+    "title": "Evening on Karl Johan Street",
+    "creator": "Edvard Munch",
+    "year": 1892,
+    "source_name": "Rasmus Meyer Collection, KODE Art Museums, Bergen",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Edvard_Munch_-_Evening_on_Karl_Johan_Street_(1892).jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/d/da/Edvard_Munch_-_Evening_on_Karl_Johan_Street_%281892%29.jpg"
   }
 ]
