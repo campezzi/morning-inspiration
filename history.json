@@ -1890,5 +1890,16 @@
     "source_name": "Wikimedia Commons",
     "source_url": "https://commons.wikimedia.org/wiki/File:Andrei_Sokolov%27s_painting_of_a_space_elevator.jpg",
     "image_url": "https://upload.wikimedia.org/wikipedia/commons/9/91/Andrei_Sokolov%27s_painting_of_a_space_elevator.jpg"
+  },
+  {
+    "date": "2026-11-03",
+    "mood": "bold",
+    "format": "Space",
+    "title": "Apollo 12 Launch",
+    "creator": "NASA",
+    "year": 1969,
+    "source_name": "Wikimedia Commons",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Apollo_12_Saturn_V_launch.jpg",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/2/25/Apollo_12_Saturn_V_launch.jpg"
   }
 ]
