@@ -1967,5 +1967,16 @@
     "source_name": "Wikimedia Commons",
     "source_url": "https://commons.wikimedia.org/wiki/File:Main_cabin_of_Concorde_102_%E2%80%98G-BOAF%E2%80%99_(50804970741).jpg",
     "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Main_cabin_of_Concorde_102_%E2%80%98G-BOAF%E2%80%99_%2850804970741%29.jpg/1280px-Main_cabin_of_Concorde_102_%E2%80%98G-BOAF%E2%80%99_%2850804970741%29.jpg"
+  },
+  {
+    "date": "2026-11-10",
+    "mood": "bold",
+    "format": "Music",
+    "title": "Fun House",
+    "creator": "The Stooges",
+    "year": 1970,
+    "source_name": "Wikipedia",
+    "source_url": "https://en.wikipedia.org/wiki/Fun_House_(The_Stooges_album)",
+    "image_url": "https://upload.wikimedia.org/wikipedia/en/6/6d/StoogesFunHouse.jpg"
   }
 ]
