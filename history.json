@@ -1978,5 +1978,16 @@
     "source_name": "Wikipedia",
     "source_url": "https://en.wikipedia.org/wiki/Fun_House_(The_Stooges_album)",
     "image_url": "https://upload.wikimedia.org/wikipedia/en/6/6d/StoogesFunHouse.jpg"
+  },
+  {
+    "date": "2026-11-11",
+    "mood": "playful",
+    "format": "Cars",
+    "title": "Isetta",
+    "creator": "Iso / Ermenegildo Preti",
+    "year": 1953,
+    "source_name": "Wikipedia",
+    "source_url": "https://en.wikipedia.org/wiki/Isetta",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/9/93/BMW_Isetta_-_Flickr_-_mick_-_Lumix.jpg"
   }
 ]
