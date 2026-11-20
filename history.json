@@ -2077,5 +2077,16 @@
     "source_name": "Wikimedia Commons",
     "source_url": "https://commons.wikimedia.org/wiki/File:Maman_de_Louise_Bourgeois_-_Bilbao.jpg",
     "image_url": "https://upload.wikimedia.org/wikipedia/commons/e/e5/Maman_de_Louise_Bourgeois_-_Bilbao.jpg"
+  },
+  {
+    "date": "2026-11-20",
+    "mood": "wry",
+    "format": "Passage",
+    "title": "A Little Fable",
+    "creator": "Franz Kafka",
+    "year": 1920,
+    "source_name": "Wikipedia",
+    "source_url": "https://en.wikipedia.org/wiki/A_Little_Fable",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/2/26/Franz_Kafka%2C_1923.jpg"
   }
 ]
