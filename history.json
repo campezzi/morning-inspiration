@@ -2088,5 +2088,16 @@
     "source_name": "Wikipedia",
     "source_url": "https://en.wikipedia.org/wiki/A_Little_Fable",
     "image_url": "https://upload.wikimedia.org/wikipedia/commons/2/26/Franz_Kafka%2C_1923.jpg"
+  },
+  {
+    "date": "2026-11-21",
+    "mood": "uncanny",
+    "format": "Surreal",
+    "title": "La Huida",
+    "creator": "Remedios Varo",
+    "year": 1961,
+    "source_name": "Wikipedia",
+    "source_url": "https://en.wikipedia.org/wiki/Remedios_Varo",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Detail_from_%22La_Huida%22_Remedios_Varo_1961_%2818813895620%29.jpg/1920px-Detail_from_%22La_Huida%22_Remedios_Varo_1961_%2818813895620%29.jpg"
   }
 ]
