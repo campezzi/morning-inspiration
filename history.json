@@ -2143,5 +2143,16 @@
     "source_name": "Wikipedia — Rain Dogs",
     "source_url": "https://en.wikipedia.org/wiki/Rain_Dogs",
     "image_url": "https://upload.wikimedia.org/wikipedia/en/6/60/Tom_Waits_-_Rain_Dogs.png"
+  },
+  {
+    "date": "2026-11-26",
+    "mood": "wry",
+    "format": "Passage",
+    "title": "Three Men in a Boat",
+    "creator": "Jerome K. Jerome",
+    "year": 1889,
+    "source_name": "Wikisource",
+    "source_url": "https://en.wikisource.org/wiki/Three_Men_in_a_Boat_(1889)/Chapter_15",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/c/cc/Cover_Jerome_Three_Men_in_a_Boat_First_edition_1889.jpg"
   }
 ]
